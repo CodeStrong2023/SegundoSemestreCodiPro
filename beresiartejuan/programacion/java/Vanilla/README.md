@@ -13,6 +13,13 @@ The workspace contains two folders by default, where:
 
 Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
+## Contenido 📖
+
+- 📌 **Juanki**
+  - 📍 Console
+    - Métodos y Funcionalidades 🛠️
+    - Ejemplos de uso 🚀
+
 ## Juanki
 
 Juanki es un paquete en el que guardo codigo que me ayuda a la hora de programar.
@@ -63,7 +70,7 @@ Imprime un mensaje en la consola sin aplicar ningún estilo especial. Útil para
 
 - `mensaje`: El mensaje que se mostrará en la consola.
 
-### Ejemplos de Uso 🚀
+### Ejemplos de uso 🚀
 
 ```java
 // Crea un cuadro con mensaje
