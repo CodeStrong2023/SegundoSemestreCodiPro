@@ -1,3 +1,4 @@
+# Clase Colecciones en Python
 # lista = Ariel, Liliana, Natalia, Osvaldo
 # creamos una variable que almacena una referencia
 nombres = ['Naty','Osvaldo','Lily','Ariel']
