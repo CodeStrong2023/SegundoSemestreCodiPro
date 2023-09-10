@@ -263,3 +263,25 @@ print(diccionario)
 
 # Eliminar diccionario
 del diccionario  # el diccionario se borro
+
+# Concatenamos listas
+lista1 = [1, 2, 3, 1]
+lista2 = [4, 5, 6, 1]
+lista3 = lista1+lista2  # concatenacion
+print(lista3)
+
+# Funcion extend para agregar varios elementos a una lista
+lista3.extend([7, 8, 9, 1])
+print(lista3)
+
+# Funcion index para saber en que indice esta un elemento
+# Sirve para ubicar en que indice esta el valor ingresado
+print(lista3.index(5))
+# Si le colocamos 0 daria error por no ser un elemento parte de la lista
+
+# Como saber cuantos valores repetidos hay dentro de una lista
+print(lista3.count(1))  # cuenta cuantos valores iguales hay dentro de la lista
+
+# Para poner al reves una lista
+lista3.reverse()
+print(lista3)
