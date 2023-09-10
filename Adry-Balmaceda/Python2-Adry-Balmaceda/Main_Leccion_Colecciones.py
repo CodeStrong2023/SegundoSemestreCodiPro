@@ -295,3 +295,13 @@ lista3.sort()  # ordena los elementos ascendentemente
 print(lista3)
 lista3.sort(reverse=True)  # ordena descendentemente
 print(lista3)
+
+# Repaso de TUPLAS
+# En tuplas se puede convertir de listas a tuplas y tuplas a listas
+tupla = (4, 'Hola', 6.78, [1, 2, 78], 4, 'Hola')
+print(tupla)
+
+# Podemos buscar un elemento
+print(4 in tupla)  # accion booleana, respuesta de tipo booleana
+# Podemos usar: index, count, len
+
