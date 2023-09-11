@@ -205,9 +205,9 @@ del planetas
 # UNA LLAVE Y UN VALOR
 # dict(key,value)
 diccionario = {
-    'IDE':'Integrated Development Enviroment',
-    'POO':'Programacion Orientada a Objetos',
-    'SABD':'Sistema de Administracion de Base de Datos'
+    'IDE': 'Integrated Development Enviroment',
+    'POO': 'Programacion Orientada a Objetos',
+    'SABD': 'Sistema de Administracion de Base de Datos'
 }
 print(diccionario)
 print(len(diccionario))  # Nos dice que hay 3 elementos, es para verificar la cantidad
@@ -356,3 +356,41 @@ print(conjunto3)
 # elementos que no comparten o que son diferentes entre ambos
 conjunto3 = conjunto1 ^ conjunto2
 print(conjunto3)
+
+# Como determinar si un conjunto es subconjunto de otro
+conjunto3 = conjunto1 | conjunto2
+print(conjunto2.issubset(conjunto3))
+print(conjunto1.issubset(conjunto3))
+print(conjunto3.issubset(conjunto1))
+print(conjunto3.issubset(conjunto2))
+# arriba preguntamos si un conjunto es subconjunto dentro de otro
+
+
+print(conjunto3.issuperset(conjunto1))  # preg: si elementos del conjunto1 estan dentro del 3
+print(conjunto3.issuperset(conjunto2))  # si es True quiere decir que conjunto3 es superconjunto
+print(conjunto2.issuperset(conjunto3))
+
+# Como saber si ambos conjuntos son disconexos
+# osea que no comparten ningun elemento en comun
+print(conjunto1.isdisjoint(conjunto2))  # no hay cosas en comun
+
+# Los conjuntos no son ni totalmente mutables ni totalmente inmutables
+# No se pueden modificar
+# Podemos trabajar con una funcion para que los conjuntos se vuelvan totalmente inmutables
+# es decir que no se pueda modificar ni agregar
+# Convertir un conjunto a totalmente inmutable
+conjunto1 = frozenset  # hace que el conjunto sea totalmente inmutable
+# no se puede agregar, modificar ni eliminar elementos del conjunto
+
+# REPASO Diccionarios
+# El diccionario puede tener distintas formas: en vertical u horizontal
+diccionarioNuevo = {'Azul': 'Blue', 'Rojo': 'Red', 'Verde': 'Green', 'Amarillo': 'Yellow'}
+print(diccionarioNuevo)
+# Como eliminar elementos
+del (diccionarioNuevo['Azul'])
+print(diccionarioNuevo)
+# Los diccionarios aceptan diferentes tipos de datos
+# Cadenas o textos, valores enteros, reales y tambien otras colecciones
+# como listas, tuplas y hasta otros diccionarios mas
+diccionario2 = {'Ariel': {'edad': 40, 'Altura': 1.83}, 'Osvaldo': [45,1.85], 'Natalia': [35, 1.67]}
+print(diccionario2)
