@@ -383,7 +383,7 @@ conjunto1 = frozenset  # hace que el conjunto sea totalmente inmutable
 # no se puede agregar, modificar ni eliminar elementos del conjunto
 
 # REPASO Diccionarios
-# El diccionario puede tener distintas formas: en vertical u horizontal
+# El diccionario puede tener distintos tipos: en columna u horizontal
 diccionarioNuevo = {'Azul': 'Blue', 'Rojo': 'Red', 'Verde': 'Green', 'Amarillo': 'Yellow'}
 print(diccionarioNuevo)
 # Como eliminar elementos
@@ -394,3 +394,31 @@ print(diccionarioNuevo)
 # como listas, tuplas y hasta otros diccionarios mas
 diccionario2 = {'Ariel': {'edad': 40, 'Altura': 1.83}, 'Osvaldo': [45,1.85], 'Natalia': [35, 1.67]}
 print(diccionario2)
+
+# Tema diccionario tipo columna
+seleccionArgentina = {
+    10: {'Nombre': 'Lionel Messi', 'Edad': 36, 'Altura': 1.70, 'Precio': '50 Millones', 'Posicion': 'Extremo Derecho'},
+    11: {'Nombre': 'Angel di Maria', 'Edad': 35, 'Altura': 1.80, 'Precio': '12 Millones', 'Posicion': 'Extremo Derecho'},
+    24: {'Nombre': 'Enzo Fernandez', 'Edad': 22, 'Altura': 1.78, 'Precio': '80 Millones', 'Posicion': 'Pivote'},
+    19: {'Nombre': 'Nicolás Otamendi', 'Edad': 35, 'Altura': 1.83, 'Precio': '3.5 Millones', 'Posicion': 'Defensa Central'},
+    23: {'Nombre': 'Emiliano Martinez', 'Edad': 31, 'Altura': 1.95, 'Precio': '28 Millones', 'Posicion': 'Portero'},
+
+}
+for llave, valor in seleccionArgentina.items():
+    print(llave, valor)
+
+# Agregar 4 jugadores al diccionario seleccionArgentina
+print('Tenemos cargados en el diccionario la cantidad de jugadores:', end='')
+print(len(seleccionArgentina))
+
+
+# Agregar  elementos al diccionario
+seleccionArgentina['4'] = {'Nombre': 'Gonzalo Montiel', 'Edad': 26, 'Altura': 1.75, 'Precio': '12 Millones', 'Posicion': 'Lateral Derecho'}
+seleccionArgentina['16'] = {'Nombre': 'Angel Correa', 'Edad': 28, 'Altura': 1.71, 'Precio': '30 Millones', 'Posicion': 'Extremo Derecho'}
+seleccionArgentina['14'] = {'Nombre': 'Exequiel Palacios', 'Edad': 24, 'Altura': 1.77, 'Precio': '22 Millones', 'Posicion': 'Mediocentro'}
+seleccionArgentina['9'] = {'Nombre': 'Julian Alvarez', 'Edad': 23, 'Altura': 1.70, 'Precio': '60 Millones', 'Posicion': 'Delantero Centro'}
+for llave, valor in seleccionArgentina.items():
+    print(llave, valor)
+
+print('Actualmente hay cargados en el diccionario la cantidad de jugadores:', end='')
+print(len(seleccionArgentina))
