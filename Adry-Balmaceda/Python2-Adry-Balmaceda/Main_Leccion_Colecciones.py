@@ -305,3 +305,28 @@ print(tupla)
 print(4 in tupla)  # accion booleana, respuesta de tipo booleana
 # Podemos usar: index, count, len
 
+# Repaso de SET o conjunto
+# para definir un conjunto
+conjunto = set()
+conjunto2 = set()
+conjunto1 = {'bye', }  # tiene que tener un elemento dentro
+# para poder añadir con la funcion add
+conjunto2.add(7)
+conjunto2.add('Hola')
+# Conjunto: grupo de elementos desordenados
+# Ppal caracteristica: no pueden haber duplicados, hay valores unicos
+# Puede tener diferentes tipos de datos
+# Funcion Add para agregar elementos, de a un elemento
+conjunto.add(7)
+conjunto.add('Hola')
+print(conjunto)
+# La funcion extend: no se puede usar para conjuntos
+# No se pueden agregar varios elementos al mismo tiempo en un conjunto
+# Funcion Add para {} necesita inicializar al menos con un elemento
+conjunto1.add('Hola')
+print(conjunto1)
+print(3 not in conjunto1)  # pregunta si 3 NO esta en el conjunto1
+
+# Como hacer la igualdad de dos conjuntos
+print(conjunto1 == conjunto2)  # nos devuelve como respuesta un booleano
+
