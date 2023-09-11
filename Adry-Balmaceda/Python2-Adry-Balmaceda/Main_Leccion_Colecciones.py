@@ -307,26 +307,52 @@ print(4 in tupla)  # accion booleana, respuesta de tipo booleana
 
 # Repaso de SET o conjunto
 # para definir un conjunto
-conjunto = set()
-conjunto2 = set()
-conjunto1 = {'bye', }  # tiene que tener un elemento dentro
+# conjunto = set()
+# conjunto2 = set()
+# conjunto1 = {'bye', }  # tiene que tener un elemento dentro
 # para poder añadir con la funcion add
-conjunto2.add(7)
-conjunto2.add('Hola')
+
 # Conjunto: grupo de elementos desordenados
 # Ppal caracteristica: no pueden haber duplicados, hay valores unicos
 # Puede tener diferentes tipos de datos
 # Funcion Add para agregar elementos, de a un elemento
-conjunto.add(7)
-conjunto.add('Hola')
-print(conjunto)
+# conjunto2.add(7)
+# conjunto1.add('Hola')
+# print(conjunto2)
 # La funcion extend: no se puede usar para conjuntos
 # No se pueden agregar varios elementos al mismo tiempo en un conjunto
 # Funcion Add para {} necesita inicializar al menos con un elemento
+# conjunto1.add('Hola') # no tiene que ser igual a Hola
+# print(conjunto1)
+# print(3 not in conjunto1)  # pregunta si 3 NO esta en el conjunto1
+
+conjunto2 = set()
+conjunto1 = {'bye', }
+conjunto2.add(7)
+conjunto2.add('Hola')
+print(conjunto2)
 conjunto1.add('Hola')
 print(conjunto1)
-print(3 not in conjunto1)  # pregunta si 3 NO esta en el conjunto1
+print(3 not in conjunto1)
 
 # Como hacer la igualdad de dos conjuntos
 print(conjunto1 == conjunto2)  # nos devuelve como respuesta un booleano
 
+# Operaciones en conjuntos
+conjunto3 = conjunto1 | conjunto2  # linea: une los dos conjuntos
+print(conjunto3)
+
+# Interseccion
+conjunto3 = conjunto1 & conjunto2  # que elemento tienen en comun
+print(conjunto3)
+# al reves
+
+# asigna el valor que en el conjunto1 y no en el conjunto2
+conjunto3 = conjunto1 - conjunto2
+print(conjunto3)
+conjunto3 = conjunto2 - conjunto1
+print(conjunto3)
+# diferencia simetrica
+# elementos que no comparten o que son diferentes entre ambos
+conjunto3 = conjunto1 ^ conjunto2
+print(conjunto3)
