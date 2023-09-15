@@ -1,0 +1,51 @@
+JAVA
+
+Java Syntax
+
+    - Java is case-sensitive: "MyClass" and "myclass" has different meaning
+    - Every line of code that runs in Java must be inside a class.  A class should always start with an uppercase first letter.
+    - The name of the java file must match the class name. When saving the file, save it using the class name and
+     add ".java" to the end of the filename.
+
+The main Method
+    - Any code inside the main() method will be executed. 
+    - Remember that every Java program has a class name which must match the filename, and that every program must 
+    contain the main() method.
+
+System.out.println()
+    - Inside the main() method, we can use the println() method to print a line of text to the screen.
+
+    EJ: public class Main {
+            public static void main(String[] args) {
+                System.out.println("Hello World");
+         }
+        }
+
+    Note: The curly braces {} marks the beginning and the end of a block of code.
+          System is a built-in Java class that contains useful members, such as out, which is short for "output". 
+          The println() method, short for "print line", is used to print a value to the screen (or a file).
+          Don't worry too much about System, out and println(). Just know that you need them together to print stuff to the screen.
+          You should also note that each code statement must end with a semicolon (;).
+
+Print Text          
+    - You can add as many println() methods as you want. Add a new line for each method.
+    - When you are working with text, it must be wrapped inside double quotations marks "".
+
+The Print() Method
+    - There is also a print() method, which is similar to println().
+    - The only difference is that it does not insert a new line at the end of the output.
+
+Print Numbers
+    - You can also use the println() method to print numbers.
+    - However, unlike text, we don't put numbers inside double quotes.
+    - You can also perform mathematical calculations inside the println() method.
+
+Java Comments
+    Single-line Comments:
+        - Single-line comments start with two forward slashes (//).
+        - Any text between // and the end of the line is ignored by Java (will not be executed).    
+    Java Multi-line Comments:
+        - Multi-line comments start with /* and ends with */.
+        - Any text between /* and */ will be ignored by Java.
+
+
