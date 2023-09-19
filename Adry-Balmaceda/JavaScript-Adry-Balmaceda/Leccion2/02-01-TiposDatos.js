@@ -7,8 +7,8 @@ realmente diriamos que es identica
 // Datos de tipo String
 var nombre = 'Adriana';
 console.log(nombre);
-// Tipo numerico
-var numero = 3000;
+
+var numero = 3000;  // Tipo numerico
 console.log(numero);
 
 var objeto = {
