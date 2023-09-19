@@ -1,0 +1,7 @@
+PYTHON -> .py 
+
+Definiciones.
+    Expresión: Fragmento de cófigo que retorna un resultado.
+    Variable: Nombre que se otorga a una expresión (siempre en minúscula)
+    Variable = Expresión
+    Datos: Permiten clasificar la onformación que contiene una variable

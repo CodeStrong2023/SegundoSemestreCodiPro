@@ -33,14 +33,14 @@ DEFINIR UNA VARIABLE:
 
 CREAR UNA LISTA:
 
-    lsita<string> myList = nweArrayList(); // list<tipoDeLaLista> nombreDeLaLista = clase
+    lsita<string> myList = newArrayList(); // list<tipoDeLaLista> nombreDeLaLista = clase
 
     agregar dato a la lista: myList.add(myString)
     Convertir darto para compatibilizar con la lista: myList.add(myInt.toString())
 
 MAPAS: Colecciones  c/ elementos asociados tipo clave/valor.
     map myMap=newHashMap();
-    myMao.put("int", myInt);
+    myMap.put("int", myInt);
         System.out.println(myMap) -> imprime el mapa completo
         System.out.println(myMap.get("Int")) -> imprime el valor asociado a esa clave
 
