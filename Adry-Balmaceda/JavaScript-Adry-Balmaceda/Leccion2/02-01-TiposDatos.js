@@ -6,8 +6,11 @@ realmente diriamos que es identica
 */
 // Datos de tipo String
 var nombre = 'Adriana';
-console.log(nombre);
-
+console.log(typeof nombre);
+nombre = 7;
+console.log(typeof nombre);
+nombre = 12.3;
+console.log(typeof nombre);
 var numero = 3000;  // Tipo numerico
 console.log(numero);
 
@@ -16,4 +19,4 @@ var objeto = {
     apellido : 'Balmaceda',
     telefono : '261000300',
 }
-console.log(objeto);
+console.log(typeof objeto);
