@@ -5,6 +5,8 @@ import org.fusesource.jansi.Ansi.Color;
 
 /**
  * Clase para el manejo de la consola que agrega colores a los mensajes.
+ * 
+ * Link de la librería Jansi: https://github.com/fusesource/jansi
  */
 
 public class ColorConsole implements ConsoleHandler {

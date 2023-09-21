@@ -1,22 +1,21 @@
 package com.ejercicios;
 
-import com.juanki.Ejercicio;
 import com.juanki.ConsoleHandler;
 
-public class Ejercicio1 extends Ejercicio {
+public class Ejercicio1 implements Ejercicio {
 
     public final String NAME = "Ejercicio #1";
     public final String DESCRIPTION = "Este es el primer ejercicio";
 
-    String obtenerNombre() {
+    public String obtenerNombre() {
         return this.NAME;
     }
 
-    String obtenerDescripcion() {
+    public String obtenerDescripcion() {
         return this.DESCRIPTION;
     }
 
-    void ejercutar(ConsoleHandler console) {
+    public void ejercutar(ConsoleHandler console) {
 
         console.log("Estas ejecutando el ejercicio 1...");
         console.error("Esto se supone que es un mensaje de error");

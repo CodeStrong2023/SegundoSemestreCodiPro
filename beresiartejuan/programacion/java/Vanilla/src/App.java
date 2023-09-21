@@ -1,26 +1,39 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import com.juanki.Ejercicio;
 import com.ejercicios.*;
+import com.juanki.*;
 
 public class App {
 
-    public static final String EXERCISES_PACKAGE = "com.ejercicios";
+    // Descomenta la linea de abajo si no quieres usar la librería Jansi
+    // public static ConsoleHandler console = new NormalConsole();
 
-    public List<Ejercicio> ejercicios = new ArrayList<>();
+    // Comenta la linea de abajo sí no tienes instalada la librería de Jansi
+    public static ConsoleHandler console = new ColorConsole();
 
     public static void main(String[] args) {
 
+        Ejercicio[] ejercicios = App.obtenerEjercicios();
+
+        for (Ejercicio ejercicio : ejercicios) {
+
+            App.console.box(ejercicio.obtenerNombre());
+            App.console.info(ejercicio.obtenerDescripcion());
+
+            App.console.log("Ejecución...");
+
+            ejercicio.ejercutar(App.console);
+
+        }
+
     }
 
-    public void resgiter() {
+    public static Ejercicio[] obtenerEjercicios() {
 
-        // Aquí se registran todos los ejercicios
+        Ejercicio[] ejercicios = new Ejercicio[] {
+                new Ejercicio1(),
+                new Ejercicio2()
+        };
 
-        this.ejercicios.add(new Ejercicio1());
-        this.ejercicios.add(new Ejercicio2());
+        return ejercicios;
 
     }
 
