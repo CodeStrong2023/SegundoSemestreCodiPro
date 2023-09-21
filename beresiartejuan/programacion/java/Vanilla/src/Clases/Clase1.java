@@ -1,9 +1,15 @@
 package Clases;
 
-import Juanki.*;
+import Juanki.Clase;
+import Juanki.Console;
+import Juanki.Ejercicio;
 import Ejercicios.Clase1.*;
 
 public class Clase1 implements Clase {
+
+    public String titulo = "Clase 1 - Bucles";
+    public String name = "[Sin nombre]";
+    public String fecha = "[Sin fecha]";
 
     public void help() {
 
