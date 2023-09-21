@@ -1,38 +1,26 @@
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import com.juanki.Ejercicio;
+import com.ejercicios.*;
 
 public class App {
 
-    public final String EXERCISES_PACKAGE = "com.ejercicios";
+    public static final String EXERCISES_PACKAGE = "com.ejercicios";
+
+    public List<Ejercicio> ejercicios = new ArrayList<>();
 
     public static void main(String[] args) {
 
-        // Se obtienen todos los ejercicios
-        List<Class<Ejercicio>> ejercicios = App.obtenerEjercicios();
-
     }
 
-    public static List<Class<Ejercicio>> obtenerEjercicios() {
+    public void resgiter() {
 
-        // Empiezo con un array vacio de clases
-        List<Class<Ejercicio>> ejercicios = new ArrayList<>();
+        // Aquí se registran todos los ejercicios
 
-        // Aca es donde pueden aparecer errores :((
-
-        try {
-
-        } catch (Exception e) {
-
-            // Sí hay un error se imprime en pantalla
-            e.printStackTrace();
-
-        }
-
-        return ejercicios;
+        this.ejercicios.add(new Ejercicio1());
+        this.ejercicios.add(new Ejercicio2());
 
     }
 
