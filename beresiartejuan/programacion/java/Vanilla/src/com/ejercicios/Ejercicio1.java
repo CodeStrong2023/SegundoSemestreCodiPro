@@ -6,7 +6,7 @@ import com.juanki.ConsoleHandler;
 public class Ejercicio1 extends Ejercicio {
 
     public final String NAME = "Ejercicio #1";
-    public final String DESCRIPTION = "";
+    public final String DESCRIPTION = "Este es el primer ejercicio";
 
     String obtenerNombre() {
         return this.NAME;
