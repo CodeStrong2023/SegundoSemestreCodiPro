@@ -7,7 +7,7 @@ import org.fusesource.jansi.Ansi.Color;
  * Clase para el manejo de la consola que agrega colores a los mensajes.
  */
 
-public class Console implements ConsoleHandler {
+public class ColorConsole implements ConsoleHandler {
 
     public final int ESPACIADO_DE_CAJA = 2;
 
