@@ -23,7 +23,6 @@ Este método dibuja la parte superior de un cuadro decorativo en la consola. Pue
 
 - `longitud`: La longitud deseada para la línea superior.
 - `decorador`: El carácter utilizado como borde del cuadro.
-- `espaciado`: El número de espacios entre el borde y el contenido.
 
 #### `content_of_box(String mensaje, String decorador, int espaciado)`
 
@@ -31,7 +30,6 @@ Imprime el contenido en un cuadro decorativo en la consola. Puedes resaltar mens
 
 - `mensaje`: El contenido que se mostrará en el cuadro.
 - `decorador`: El carácter utilizado como borde del cuadro.
-- `espaciado`: El número de espacios entre el borde y el contenido.
 
 #### `box(String mensaje)`
 
@@ -73,13 +71,13 @@ Console.error("Error: Algo salió mal.");
 Console.log("Este es un mensaje de registro.");
 
 // Dibuja un cuadro personalizado
-Console.top_of_box(18, "*", 2); 
-Console.content_of_box("Contenido especial", "#", 1);
-Console.top_of_box(18, "*", 2);
+Console.top_of_box(18, "*"); 
+Console.content_of_box("Contenido especial", "#");
+Console.top_of_box(18, "*");
 
 /* Salida:
-**********************
-# Contenido especial #
-**********************
+************************
+#  Contenido especial  #
+************************
 */
 ```
