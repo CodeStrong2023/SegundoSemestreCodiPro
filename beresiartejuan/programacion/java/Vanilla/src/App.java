@@ -1,4 +1,4 @@
-import com.ejercicios.*;
+import com.ejercicios.Ejercicio;
 import com.juanki.*;
 
 public class App {
@@ -13,24 +13,35 @@ public class App {
 
         Ejercicio[] ejercicios = App.obtenerEjercicios();
 
-        for (Ejercicio ejercicio : ejercicios) {
-
-            App.console.box(ejercicio.obtenerNombre());
-            App.console.info(ejercicio.obtenerDescripcion());
-
-            App.console.log("Ejecución...");
-
-            ejercicio.ejercutar(App.console);
-
+        if (ejercicios.length <= 0) {
+            App.console.error("No hay ejercicios cargados!");
+            return;
         }
+
+        App.console.log("--- Ejercicios ---");
+        App.console.log("");
+
+        for (int index = 0; index < ejercicios.length; index++) {
+            App.console.log("#" + index + " " + ejercicios[index].obtenerNombre());
+        }
+
+        // for (Ejercicio ejercicio : ejercicios) {
+
+        // App.console.box(ejercicio.obtenerNombre());
+        // App.console.info(ejercicio.obtenerDescripcion());
+
+        // App.console.log("Ejecución...");
+
+        // ejercicio.ejercutar(App.console);
+
+        // }
 
     }
 
     public static Ejercicio[] obtenerEjercicios() {
 
         Ejercicio[] ejercicios = new Ejercicio[] {
-                new Ejercicio1(),
-                new Ejercicio2()
+                new com.ejercicios.leccion2.Ejercicio1()
         };
 
         return ejercicios;
