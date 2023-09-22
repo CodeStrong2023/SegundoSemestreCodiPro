@@ -10,4 +10,6 @@ public interface ConsoleHandler {
 
     void log(String message);
 
+    void clear();
+
 }

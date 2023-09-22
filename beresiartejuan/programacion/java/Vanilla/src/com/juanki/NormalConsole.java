@@ -89,4 +89,21 @@ public class NormalConsole implements ConsoleHandler {
         System.out.println(mensaje);
     }
 
+    public void clear() {
+
+        final String os = System.getProperty("os.name");
+
+        try {
+            final ProcessBuilder process = new ProcessBuilder();
+
+            if (os.contains("Windows")) {
+                process.command("cls").inheritIO().start().waitFor();
+            } else {
+                process.command("clear").inheritIO().start().waitFor();
+            }
+        } catch (Exception e) {
+            this.error("No se pudo borrar la pantalla");
+        }
+    }
+
 }
