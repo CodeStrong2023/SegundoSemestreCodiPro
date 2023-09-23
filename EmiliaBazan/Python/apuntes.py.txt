@@ -5,3 +5,39 @@ Definiciones.
     Variable: Nombre que se otorga a una expresión (siempre en minúscula)
     Variable = Expresión
     Datos: Permiten clasificar la onformación que contiene una variable
+    
+Tipo de datos:
+    Integer: Nros enteros
+    Float: Nros racionales
+    Strings: Cadenas de texto
+    Booleans: True o False
+    Complex: Nros complejos (j)
+
+    Para conocer el tipo de dato de una variable se puede usar la funcion:
+        type()    
+
+Comentarios:
+    Líneas de texto informativas que python ignora.
+        # -> Tipo renglón
+        """   """ -> Tipo párrafo
+
+Operaciones aritméticas:
+    + -> Suma
+    - -> Resta 
+    / -> División
+    * -> Multiplicación
+    ** -> Potencia
+    // -> División entera
+    % -> Módulo
+
+Operadores de comparación:
+
+    == -> Igualdad
+    != -> Desigualdad
+    > -> Mayor
+    < -> Menor
+    >= -> Mayor o igual que
+    <= -> Menor o igual que 
+
+        Los operadores de comparación <, >, <= y >= sólo se aplican a int o float. 
+
