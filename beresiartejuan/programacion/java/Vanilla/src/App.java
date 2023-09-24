@@ -26,18 +26,55 @@ public class App {
     public int mostrarMenu() {
 
         int seleccionado = -1;
+        Scanner input = new Scanner(System.in);
 
         do {
-            break;
+
+            this.console.clear();
+            this.console.box("Ejercicios");
+
+            for (int index = 0; index < this.ejercicios_registrados.length; index++) {
+                this.console.log("- " + index + " " + this.ejercicios_registrados[index].obtenerNombre());
+            }
+
+            if (this.state == AppState.ERROR) {
+                this.console.error("El ejercicio #" + seleccionado + " no esta disponible!");
+            }
+
+            try {
+
+                System.out.print("Ingresa el numero del ejercicio: ");
+                seleccionado = input.nextInt();
+
+                if (seleccionado < 0)
+                    throw new Exception("Haz seleccionado un indice negativo");
+
+                if (seleccionado > this.ejercicios_registrados.length)
+                    throw new Exception("El ejercicio seleccionado no existe");
+
+            } catch (InputMismatchException e) {
+
+                input.close();
+                throw e;
+
+            } catch (Exception e) {
+
+                this.state = AppState.ERROR;
+
+                continue;
+
+            }
+
         } while (seleccionado < 0 || seleccionado > this.ejercicios_registrados.length);
 
-        return 0;
+        input.close();
+
+        return seleccionado;
     }
 
     public static void main(String[] args) {
 
         App app = new App();
-        Scanner input = new Scanner(System.in);
 
         app.console.clear();
 
@@ -46,25 +83,14 @@ public class App {
             return;
         }
 
-        app.console.log("--- Ejercicios ---");
-        app.console.log("");
+        int indice = app.mostrarMenu();
+        Ejercicio ejercicio = app.ejercicios_registrados[indice];
 
-        for (int index = 0; index < app.ejercicios_registrados.length; index++) {
-            app.console.log("- " + index + " " + app.ejercicios_registrados[index].obtenerNombre());
-        }
+        app.console.clear();
+        app.console.box(ejercicio.obtenerNombre());
+        app.console.info(ejercicio.obtenerDescripcion());
 
-        app.console.info("Se pudo!");
-
-        // for (Ejercicio ejercicio : ejercicios) {
-
-        // App.console.box(ejercicio.obtenerNombre());
-        // App.console.info(ejercicio.obtenerDescripcion());
-
-        // App.console.log("Ejecución...");
-
-        // ejercicio.ejercutar(App.console);
-
-        // }
+        ejercicio.ejercutar(app.console);
 
     }
 
@@ -74,7 +100,8 @@ public class App {
                 new com.ejercicios.leccion2.Ejercicio1(),
                 new com.ejercicios.leccion2.Ejercicio2(),
                 new com.ejercicios.leccion2.Ejercicio3(),
-                new com.ejercicios.leccion2.Ejercicio4()
+                new com.ejercicios.leccion2.Ejercicio4(),
+                new com.ejercicios.leccion2.Ejercicio5()
         };
 
         return ejercicios;
