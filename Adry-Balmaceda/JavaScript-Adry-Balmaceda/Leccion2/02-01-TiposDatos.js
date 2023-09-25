@@ -19,4 +19,4 @@ var objeto = {
     apellido : 'Balmaceda',
     telefono : '261000300',
 }
-console.log(typeof objeto);
+console.log(objeto);
