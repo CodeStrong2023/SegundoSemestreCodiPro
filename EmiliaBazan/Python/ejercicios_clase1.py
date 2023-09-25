@@ -1,7 +1,7 @@
 # Ejercicio1: Iterar un rango de 0 a 10 e imprimir nros divisibles por 3.
 print("Ejercicio 1: Iterar un rango de 0 a 10 e imprimir nros divisibles por 3")
 
-for i in range(0, 10):
+for i in range(11):
     if i % 3 == 0:
         print(i)
 
@@ -20,7 +20,9 @@ for nro in rango:
 
 print("")
 # Dada la siguiente tupla:
-# tupla = (13,1,8,3,2,5,8) , definir la tupla, crear una lista e imprimir por consola los nros menores a 5."""
+# tupla = (13,1,8,3,2,5,8) , definir la tupla, crear una lista e imprimir por consola los nros menores a 5.
+
+print("Imprimir por consola los nros menores a 5")
 
 tupla = (13, 1, 8, 3, 2, 5, 8)
 for dato in tupla:

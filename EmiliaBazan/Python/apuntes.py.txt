@@ -41,3 +41,19 @@ Operadores de comparación:
 
         Los operadores de comparación <, >, <= y >= sólo se aplican a int o float. 
 
+Colecciones
+    Listas 
+        Mutables
+    Tuplas 
+        Inmutables 
+    Set 
+        Son mutables pero no admite repeticiones, no contiene indice y su orden es aleatorio. También se lo conoce como conjuntos.
+        Sintaxis:
+            nombre = {'elemento1', 'elemento2', 'elemento3'}
+
+            print(len(nombre)) // cantidad de elementos 
+            print("elemento1" in nombre) // respuesta booleana a si el elemento está en el set 
+            nombre.add("elemento4") // agregar elemento4 al set, no se puede agregar duplicado
+            nombre.remove("elemento1") // Elimina el elemento1, puede arrojar error si el dato no existe
+            nombre.discard("elemento1") // Elimina el elemento1, no arroja error si el dato no existe
+            nombre.clear() // Limpia el set
