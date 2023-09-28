@@ -4,6 +4,10 @@
 
 def ejercicio2():
     """(Lección 1) Ejercicio 2: Rangos"""
+
+    print("Ejercicio 2: Crear un rango de numeros de 2 a 6 e imprimelos")
+    print("Expectativa: 2,3,4,5,6", end="\n\n")
+
     fin = 6
     rango = range(2, fin + 1)
 

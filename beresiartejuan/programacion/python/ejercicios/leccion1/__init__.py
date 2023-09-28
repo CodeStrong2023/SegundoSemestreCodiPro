@@ -1,6 +1,6 @@
-from ejercicios.leccion1.ejercicio1 import ejercicio1
-from ejercicios.leccion1.ejercicio2 import ejercicio2
-from ejercicios.leccion1.ejercicio3 import ejercicio3
+from .ejercicio1 import ejercicio1
+from .ejercicio2 import ejercicio2
+from .ejercicio3 import ejercicio3
 
 
 def leccion1():
