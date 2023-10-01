@@ -41,19 +41,100 @@ Operadores de comparación:
 
         Los operadores de comparación <, >, <= y >= sólo se aplican a int o float. 
 
-Colecciones
+Colecciones en Python
     Listas 
         Mutables
+        Sintaxis:
+            nombre = ['elemento1', 'elemento2','elemento3']
+            lista = [1,2,3]
+            print(len(nombre)) // cantidad de elementos 
+            nombre.append(elemento4) //Agrega un elemento al final, puede ser de cualquier tipo incluso otras listas
+            lista1= nombre + lista // Concatenar dos listas y crear una nueva
+            lista1.extend([3,4,5]) // Agrega varios elementos a la lista
+            print(nombre.index('elemento2')) // Muestra en que indice esta el elemento, si se pone un valor que no está arroja error
+            print(nombre.count('elemento1')) // Es para saber cuántos elementos repetidos hay
+            print(nombre.reverse()) // Imprime la lista al reves 
+            nombre1 = nombre * 2 // Para que la lista se multiplique repitiendo sus elementos
+            pritn(nombre.sort())// Para imprimir los elementos ordenados de manera ascendente
+            print(nombre.sort(reverse=True)) // Imprime los elementos ordenados de manera descendente
+        Pilas:
+            Siempre se trabaja con el último elemento como si se tratara de una lista apilada.
+            nombre.append['elemento4'] // Agrego elementos por el final
+            nombre.pop() // Elimina el último elemento de la pila 
+            elementoBorrado = nombre.pop() // Elimina la variable de la pila y la asigna a una nueva variable
+        Colas: 
+            Estructuras de datos de tipo fifo (first input/first output).
+            nombre.append('Elemento4') // Se agrega un elemento al final de la cola 
+            nombre.pop(0) // Se retira el primer elemento de la cola 
+            
+
     Tuplas 
-        Inmutables 
+        Inmutables. Pueden tener diferentes tipos de elementos. No admite modificaciones de sus elementos, ni agregar ni quitar elementos.
+        Podemos transformar tuplas en listas y listas en tuplas.
+        Sintaxis:
+            tupla = (4, 'Elemento2', 'Elemento3')
     Set 
         Son mutables pero no admite repeticiones, no contiene indice y su orden es aleatorio. También se lo conoce como conjuntos.
         Sintaxis:
             nombre = {'elemento1', 'elemento2', 'elemento3'}
+            nombre = set('elemento1', 'elemento2', 'elemento3')
 
             print(len(nombre)) // cantidad de elementos 
             print("elemento1" in nombre) // respuesta booleana a si el elemento está en el set 
-            nombre.add("elemento4") // agregar elemento4 al set, no se puede agregar duplicado
+            nombre.add("elemento4") // agregar elemento4 al set, no se puede agregar duplicado ni multiples elementos con esta fn
             nombre.remove("elemento1") // Elimina el elemento1, puede arrojar error si el dato no existe
             nombre.discard("elemento1") // Elimina el elemento1, no arroja error si el dato no existe
             nombre.clear() // Limpia el set
+
+            Operaciones conconjuntos:
+
+            conjunto3= conjunto1 | conjunto2 // Conjunto de los dos elementos. Si hay elementos repetidos, usa solo uno 
+                print(conjunto1.issubjet(conjunto3)) // Imprime un booleano si un conjunto es subconjunto de otro
+                print(conjunto3.issuperset(conjunto1)) // Imprime un booleano si el conjunto3 contiene al conjunto1
+                print(conjunto1.isdijoint(conjunto2)) // Imprime un booleano según si tienen elementos en común o no
+            conjunto3= conjunto1 & conjunto2 // Conjunto de elementos que tienene en común
+            conjunto3= conjunto1 - conjunto2 // Conjunto con los elementos del conjunto2 que no estan en el conjunto1
+            conjunto3= conjunto2 - conjunto1 // Conjunto con los elementos del conjunto1 que no estan en el conjunto2
+            conjunto3= conjunto1 ^ conjunto2 // Conjunto con elementos del conjunto1 y conjunto2 pero que no estan en ambos
+            conjunto = frozenset // Hace que el conjunto sea totalmente inmutable, no se puede agregar ni quitar elementos
+            
+
+    Disccionarios
+        Estan compuestos por dos elementos; el par clave (llave, key), valor (value). Los elementos no poseen indices, se accede a los valores a través de
+        las claves.
+        Sintaxis:
+            nombre = {
+                'Clave1':'valor1',
+                'Clave2:'Valor2',
+                'Clave2':'Valor3'
+            }
+
+             print(len(nombre)) // cantidad de elementos 
+             print(nombre['Clave1']) //Accede al valor desde la llave del elemento en el diccionario, la clave es case-sensitive.
+             print(diccionario.get('Clave2')) // Es otra manera de recuperar valores a traves de claves.
+             nombre['Clave1']='Value1' // Cambia el valor asociado a la clave.
+             print('Clave1' in nombre) // Devuelve un booleano si el elemento está o no en el diccionario
+             nombre['Clave4'] = 'Valor4' // Agrega un elemento al diccionario
+             nombre.pop('Clave2') // Elimina el par clave valor.
+             nombre.clear() // Elimina todos los elementos del diccionario.
+             del nombre // Elimina el diccionario
+             del (nombre('Clave1')) // Para eliminar un elemento del diccionario con su clave 
+             nombre = {clave1 : {subclave1:valor1}} // Los diccionarios pueden contener subdiccionarios
+             nombre = {clave1 : {subclave1:valor1, clave2 : [dato1, dato2]}} // Los diccionarios pueden tener diferentes tipos de datos
+             Recorrer el diccionario mostrando las claves con un bicle for:
+                for termino in diccionario:
+                    print(termino)
+
+            Funcion para recorrer un diccionari:
+                for termino, valor in diccionario.items():
+                    print(termino,valor)        
+
+            Otra manera de acceder al diccionario mostrando solo las claves:
+                for termino in diciionario.keys():
+                    print(termino)
+
+            Otra manera de acceder al diccionario mostrando solo valores:
+                for valor in diccionario.value():
+                    print(valor)        
+
+                
