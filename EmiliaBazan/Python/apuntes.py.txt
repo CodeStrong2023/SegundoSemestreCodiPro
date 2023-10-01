@@ -66,7 +66,7 @@ Colecciones en Python
             Estructuras de datos de tipo fifo (first input/first output).
             nombre.append('Elemento4') // Se agrega un elemento al final de la cola 
             nombre.pop(0) // Se retira el primer elemento de la cola 
-            
+
 
     Tuplas 
         Inmutables. Pueden tener diferentes tipos de elementos. No admite modificaciones de sus elementos, ni agregar ni quitar elementos.
@@ -121,7 +121,7 @@ Colecciones en Python
              del (nombre('Clave1')) // Para eliminar un elemento del diccionario con su clave 
              nombre = {clave1 : {subclave1:valor1}} // Los diccionarios pueden contener subdiccionarios
              nombre = {clave1 : {subclave1:valor1, clave2 : [dato1, dato2]}} // Los diccionarios pueden tener diferentes tipos de datos
-             Recorrer el diccionario mostrando las claves con un bicle for:
+             Recorrer el diccionario mostrando las claves con un bucle for:
                 for termino in diccionario:
                     print(termino)
 
