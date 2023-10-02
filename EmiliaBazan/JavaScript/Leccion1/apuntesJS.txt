@@ -1,0 +1,5 @@
+Java Script
+
+Crear un archivo index.html
+En el cuerpo del texto comenzar a escribir HTML y en las opciones desplegables elegit HTML:5
+Se autocompletará con una plantilla HTML
