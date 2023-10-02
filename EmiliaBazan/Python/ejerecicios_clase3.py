@@ -33,3 +33,8 @@ seleccionArg = {
 }
 
 print(seleccionArg[10])
+
+print('')
+
+for clave, valor in seleccionArg.items():
+    print(clave, valor)

@@ -77,9 +77,49 @@ import math
 # 4.4 Ejercicio 1 con Matemáticas y la clase math
 # Sacar la raíz cuadrada de un número positivo
 
-numero = int(input('Ingrese un número positivo: '))
-while numero < 0:
-    print("Error, ingrese nro positivo")
-    numero = int(input('Ingrese un número positivo: '))
+# numero = int(input('Ingrese un número positivo: '))
+# while numero < 0:
+#     print("Error, ingrese nro positivo")
+#     numero = int(input('Ingrese un número positivo: '))
 
-print(f'\nLa raíz cuadrada de {numero} es: {math.sqrt(numero):.2f}')
+# print(f'\nLa raíz cuadrada de {numero} es: {math.sqrt(numero):.2f}')
+
+# 4.6 Ejercicio 1 Llenar una Lista con nros del 1 al 50
+
+# lista = list(range(1,51))
+
+# for i in lista:
+#     print(i, end ='- ')
+
+# 4.7 Ejercicio 2 Modificar los Elemento de una Lista, llenar una lista con nros del 1 al 10
+# Luego modificar los elementos multiplicandolos por un valor ingresado por el usuario
+
+# elementos = list(range(1, 11))
+
+# for i in elementos:
+#     print(i, end='- ')
+
+# modificador = int(input("\nIngrese un numero que modifique la lista: "))
+
+# for indice, i in enumerate(elementos):
+#     elementos[indice] *= modificador
+
+# print(f' n\Lista de elementos multiplicada por {modificador}: ')
+
+# for i in elementos:
+#     print(i, end= '-')
+
+# 4.8 Ejercicio 3 Insertar Elementos y Ordenarlos Función sort(), pedir nros al usuario hasta que ingrese 0 por ultimo ordenarlos
+# de menor a mayor
+
+# lista = []
+# salir = False
+
+# while not salir:
+#     numero = int(input("Digite un numero: "))
+#     if numero == 0:
+#         salir = True
+#     else:
+#         lista.append(numero)
+# lista.sort()
+# print(lista)
