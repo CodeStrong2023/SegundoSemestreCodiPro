@@ -137,4 +137,10 @@ Colecciones en Python
                 for valor in diccionario.value():
                     print(valor)        
 
-                
+Funciones
+    Bloque de código que se puede llamar n cantidad de veces
+    Sintaxis:
+        def miFuncion():
+            *Aqué debajo se coloca identado lo que queremos que la función haga.
+
+            
