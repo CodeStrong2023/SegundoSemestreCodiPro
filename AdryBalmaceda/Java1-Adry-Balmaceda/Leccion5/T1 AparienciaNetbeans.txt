@@ -1,0 +1,7 @@
+Leccion 5:
+
+Como cambiar el fondo a modo oscuro:
+Tools--Options--Fonts&Colors--Background--Seleccion color fondo
+
+Como cambiar apariencia
+Tools--Options--Appearance--Look and Feel--Seleccion apariencia de Netbeans
