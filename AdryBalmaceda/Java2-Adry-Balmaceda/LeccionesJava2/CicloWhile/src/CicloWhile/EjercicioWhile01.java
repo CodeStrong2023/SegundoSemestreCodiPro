@@ -34,6 +34,15 @@ se puede poner: contando < 7
 estemos usando
 con ciclo for: se puede recorrer arreglos, matrices incrementando o 
 decrementando siempre y cuando se cumpla la condicion
+
+ *Sintaxis Java:
+ *palabra break: es para romper el ciclo
+apenas encuentra esta condicion if(contando % 2 ==0) se cumple se imprime y 
+llega a break cumple el ciclo y sale
+palabra continue: vamos a la siguiente iteracion
+ *labels: sintaxis no recomendable
+palabra inicio: al inicio del ciclo y luego del break o continue
+tienen mayor uso y efecto en ciclos anidados
  */
 
 /*        
@@ -55,8 +64,30 @@ public class EjercicioWhile01 {
         }while(contador <= 7);  // Todo esto es el ciclo do while
         
         //Comparacion con el ciclo for
+        // Uso de palabras break y continue junto a las etiquetas (labels)
+       
         for(var contando = 0; contando <= 7; contando++){  // <7 muestra hasta 6
-            System.out.println("contando = " + contando);            
+            if(contando % 2 == 0){
+                 System.out.println("contando = " + contando); 
+                 break ;
+            }
+           
+        }
+         inicio:
+        for(var contando = 0; contando <= 7; contando++){  // <7 muestra hasta 6
+            if(contando % 2 != 0){
+                 continue inicio;  // vamos a la sgte iteracion
+    }
+            System.out.println("contando = " + contando);
+        }
+        
+        // Etiquetas Labels: esta sintaxis no es recomendable pero hay que saber como funcionan
+        for(var contando = 0; contando <= 7; contando++){  // <7 muestra hasta 6
+            if(contando % 2 == 0){
+                 System.out.println("contando = " + contando); 
+                 
+            }
         }
     }
+            
 }
