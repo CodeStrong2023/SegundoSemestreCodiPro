@@ -1,0 +1,21 @@
+package com.ejercicios.;
+
+import com.juanki.ConsoleHandler;
+import com.ejercicios.Ejercicio;
+
+public class  implements Ejercicio {
+
+    public final String NAME = "";
+    public final String DESCRIPTION = "";
+
+    public String obtenerNombre() {
+        return this.NAME;
+    }
+
+    public String obtenerDescripcion() {
+        return this.DESCRIPTION;
+    }
+
+    public void ejercutar(ConsoleHandler console) {}
+
+}

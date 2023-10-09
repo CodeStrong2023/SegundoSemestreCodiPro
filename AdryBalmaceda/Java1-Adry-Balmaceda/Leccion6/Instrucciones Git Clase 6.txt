@@ -1,0 +1,14 @@
+Instrucciones Clase 6
+
+Comandos utilizados
+git status
+git add
+git commit
+git log
+
+Ingresamos nuestro proyecto al repositorio
+Ingresamos nuestra carpeta Java al commit
+
+git status
+Tareas pendientes en area de trabajo: color rojo
+Tareas en el area de preparación: color verde
