@@ -6,7 +6,8 @@ introduzca un numero negativo
 Scanner: es una clase
 JOptionPane: es una clase
 ofrece una ventana emergente donde digitamos numero y muestra resultado
- */
+ CTRL+SHIFT+N: new project
+*/
 package Ciclos01;
 
 import javax.swing.JOptionPane;
