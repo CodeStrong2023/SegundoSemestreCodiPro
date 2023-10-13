@@ -1,6 +1,7 @@
 /*
  * Ejercicio 7: pedir numeros hasta que se introduzca uno negativo
 y calcular el promedio
+JOptionPane
  */
 package Ciclos07;
 

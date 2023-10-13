@@ -1,5 +1,7 @@
 /*
- * 
+ * Operaciones aritmeticas
+    argumentos
+    operador this
  */
 package Operaciones;
 
