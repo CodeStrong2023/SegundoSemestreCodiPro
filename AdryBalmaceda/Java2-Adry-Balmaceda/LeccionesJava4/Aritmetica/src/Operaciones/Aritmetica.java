@@ -1,7 +1,7 @@
 /*
  * Operaciones aritmeticas
     argumentos
-    operador this
+    operador this: apunta al atributo
  *constructor: es un metodo especial
 objetivos: construye un objeto, reserva un espacio de memoria e 
 inicializa los atributos de la clase
@@ -35,8 +35,8 @@ public class Aritmetica {
 
     // sobrecarga de constructores y operador this
     public Aritmetica(int a, int b) {  // constructor 2, asignamos valores, inicializa atributos
-        this.a = a;  
-        this.b = b;
+        this.a = a;  // si no ponemos this la variable que recibimos debe ser diferente al atributo para que sepa diferenciar el compilador el atributo de la variable
+        this.b = b;  // si la variables es identica al atributo necesitamos this, apunta al punto de memoria(Heap) donde esta la variable
         System.out.println("Se esta ejecutando el constructor numero 2");
     }
 

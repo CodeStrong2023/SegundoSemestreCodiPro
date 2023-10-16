@@ -18,9 +18,9 @@ package Clases;
  */
 public class Persona {
 
-    // Atributos de la clase
-    String nombre;
-    String apellido;
+    // Atributos de la clase: especificar que son publicos para acceder desde otro paquete
+    public String nombre; 
+    public String apellido;
 
     // Metodos de la clase (Acciones)
     public void obtenerInformacion() {
