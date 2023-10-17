@@ -73,8 +73,25 @@ class Persona {  // no se pone el modificador de acceso, no es necesario escribi
 
     // metodo constructor
     Persona(String nombre, String apellido) {  // Constructor, tampoco necesita modificador de acceso
+
+        super();  // llamada al constructor de la clase Padre object
+        // Imprimir imprimir = new Imprimir();
+        new Imprimir().imprimir(this);  // trae el espacio de memoria de la clase persona
         this.nombre = nombre;  // constructores que apuntan a los atributos de una misma clase
         this.apellido = apellido;
+        System.out.println("Objeto persona usando this: " + this);
     }
 
+}
+
+class Imprimir {
+
+    public Imprimir() {
+        super();  // el constructor de la clase padre, para reservar memoria
+    }
+
+    public void imprimir(Persona persona) {
+        System.out.println("Persona desde la clase imprimir: " + persona);
+        System.out.println("Impresion del objeto actual (this): " + this);
+    }
 }
