@@ -3,6 +3,25 @@
 seleccionar todos los atributos para generar metodos
  *main, hoja de prueba: es para ir probando el codigo que vamos
 armando
+
+ *atributo: modificador default o package(no se escribe) lo recibe
+cuando no tiene modificador de acceso
+public, private o protected
+
+ *Metodo to string: operador.toString
+permite imprimir el estado del objeto, los valores de cualquier
+atributo que agreguemos al metodo
+objetivo: cuando hagamos la impresion se vea toda la informacion
+
+ *Contexto estatico: cuando se cargan Clases
+Contexto dinamico: cuando se cargan Objetos (se necesitan las clases creadas)
+contexto estatico no puede acceder al dinamico y el dinamico si
+puede acceder al estatico
+ *static: se asocia con la clase y no con los objetos
+esta palabra si no esta se asocia con los objetos y no la clase
+ *atributos: se pueden acceder desde cualquier objeto
+lo que se modifica en la clase lo ven los objetos
+
  */
 package dominio;
 
@@ -46,6 +65,13 @@ public class Persona {
 
     public void setEliminado(boolean eliminado) {
         this.eliminado = eliminado;
+    }
+
+    // Metodo toString: debe retornar algo
+    public String toString() {  // convierte en una cadena cada atributo
+        return "Persona [ nombre: " + this.nombre
+                + ", sueldo: " + this.sueldo
+                + ", eliminado: " + this.eliminado + " ]";
     }
 
 }
