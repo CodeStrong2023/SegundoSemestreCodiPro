@@ -1,4 +1,4 @@
-/*Ejercicio 1: Leer un nro y mostrar su cuadrado, repetir hasta que se introduza un numero negativo */
+*Ejercicio 1: Leer un nro y mostrar su cuadrado, repetir hasta que se introduza un numero negativo */
 
 
 
