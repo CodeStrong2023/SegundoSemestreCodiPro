@@ -125,3 +125,21 @@ PALABRAS BREAK y CONTINUE
                 }
                 System.out.println("Número: " + i); 
             }
+
+Lección 3: Clases y objetos
+
+	Una clase conjunto de objetos que comparten una estructura y comportamientos comunes, son necesarias para instanciaar un objeto.
+	Es una plantilla o molde en la que trabajaremos y de la cual podemos crear objetos.
+	Las clases tinen atributos y métodos los cuales extraen información de lo que es el mundo real. Los atributos son características
+	asociadas al objeto.
+		Ej de atributo para una clase llamada persona: Nombre y apellido de una persona.
+	Las clases deben ser públicas para poder acceder desde otros archivos.
+		Sintaxis:
+			package Clases;
+				public class Persona {
+    
+				}
+
+	Objeto: es una instancia de una clase, cada objeto tiene propiedades específicas que los diferencian de otros objetos;
+	estas caracteríasticas son conocidas como atributos.
+	Métodos: Son las acciones que podemos realizar con nuestros objetos.
