@@ -164,3 +164,6 @@ Lección 3: Clases y objetos
                         persona1.obtenerInformacion(); 
                     }
                 }
+
+    Operador this: Es una variable que apunta al objeto en ejecución, es decir al espacio en memoria donde está guardado el objeto para hacer
+    modificaciones. Hace que se diferencien los atributos de los argumentos.            
