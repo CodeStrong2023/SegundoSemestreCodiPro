@@ -1,3 +1,5 @@
+/* Pedir nros hasta que se tecclee un cero, mostrar la suma de los nros introducidos
+*/
 package Ciclos06;
 
 import java.util.Scanner;
@@ -9,7 +11,7 @@ public class Ciclos06 {
         System.out.println("Ingrese un nro: ");
         nro = Integer.parseInt(entrada.nextLine());
         while (nro != 0){
-            suma = +nro;
+            suma += nro;
             System.out.println("Ingrese un nro: ");
             nro = Integer.parseInt(entrada.nextLine()); 
         }

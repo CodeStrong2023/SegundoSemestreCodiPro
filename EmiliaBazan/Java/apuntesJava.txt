@@ -142,4 +142,25 @@ Lección 3: Clases y objetos
 
 	Objeto: es una instancia de una clase, cada objeto tiene propiedades específicas que los diferencian de otros objetos;
 	estas caracteríasticas son conocidas como atributos.
-	Métodos: Son las acciones que podemos realizar con nuestros objetos.
+	Métodos: Son las acciones que podemos realizar con nuestros objetos. Es una parte de código que podemos reutilizar y llamar las veces que
+    sean necesarias (argumentos), también puede devolver un valor (valor de retorno). Los métodos y atributos comienzan siempre con minuscula.
+        Para definir el método:
+            public: Significa que el método es público y se puede acceder de otros archivos
+            void: Significa que no devuelve ningun valor de retorno.
+
+            EJ: public void obtenerInformacion(){
+
+            }    //Lo que va entre paréntesis se lo conoce como argumento
+
+            main: Es un método que permite ejecutar hacia la consola los programas. Se recomienda ponerlo en otro archivo. Cuando las variables
+            se declaran dentro de éste, las variables son locales.
+                 psvm + tab:
+                public class pruebaPersona {
+                    public static void main(String[] args) {
+                        Persona persona1; //Definimos una variable llamada persona1
+                        persona1 = new Persona();//Usamos la palabra reservada new y llamamos al contructor
+                        persona1.nombre = "Emilia";
+                        persona1.apellido = "Bazàn";
+                        persona1.obtenerInformacion(); 
+                    }
+                }
