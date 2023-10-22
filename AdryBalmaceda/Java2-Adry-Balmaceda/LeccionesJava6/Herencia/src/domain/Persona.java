@@ -34,6 +34,11 @@ Tenerlo en cuenta para trabajar con herencia
 trabajar con la HERENCIA
 
  *constructores y metodos: tipo public cuando hay encapsulamiento
+ *sobrecarga de constructores: 2 o más constructores de una misma clase
+con diferentes parametros y argumentos
+mismo identificador ej Persona, los parametros los hacen diferente
+permite tener mas de 1 opcion para crear objetos de la 
+clase padre a la clase hija
  */
 package domain;
 

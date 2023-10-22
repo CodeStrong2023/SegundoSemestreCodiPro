@@ -12,6 +12,7 @@ package test;
 
 import domain.Cliente;
 import domain.Empleado;
+import domain.Persona;
 import java.util.Date;
 
 /*
@@ -23,10 +24,13 @@ public class TestHerencia {
         Empleado empleado1 = new Empleado("Adry", 57000.00);  // constructor
         System.out.println("empleado1 = " + empleado1);
 
-        Date fecha1 = new Date();
-
-        Cliente cliente1 = new Cliente(fecha1, true, "Bety", 'F', 32, "9 de Julio 1413");
-        System.out.println("cliente1 = " + cliente1);
+//        Date fecha1 = new Date();
+//
+//        Cliente cliente1 = new Cliente(fecha1, true, "Bety", 'F', 32, "9 de Julio 1413");
+//        System.out.println("cliente1 = " + cliente1);
+//        
+//        // Al crear el objeto: tendremos a disposicion cualquiera de los constructores
+//        Persona persona1 = new Persona();
     }
 
 }
