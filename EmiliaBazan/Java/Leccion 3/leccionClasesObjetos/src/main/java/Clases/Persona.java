@@ -7,11 +7,11 @@ package Clases;
 
 public class Persona {
     //Atributosde la clase (características)
-    String nombre;
-    String apellido;
+    public String nombre;
+    public String apellido;
     //Métodos de la clase (atriutos)
     public void obtenerInformacion(){
         System.out.println("Nombre: " +nombre );
         System.out.println("Apellido: "+apellido);
     }
-}
+} 

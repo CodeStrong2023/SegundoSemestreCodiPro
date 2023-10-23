@@ -166,4 +166,19 @@ Lección 3: Clases y objetos
                 }
 
     Operador this: Es una variable que apunta al objeto en ejecución, es decir al espacio en memoria donde está guardado el objeto para hacer
-    modificaciones. Hace que se diferencien los atributos de los argumentos.            
+    modificaciones. Hace que se diferencien los atributos de los argumentos.
+
+    Constructor: Método especial que construye un objeto, reserva un espacio e memoria e inicializa los atributos de la clase.
+
+    Alcance de variables: Solo se pueden urilizar dentro del método dónde se definió.
+
+    Memoria stack:
+    En Java, la memoria de la pila (stack memory) se utiliza para almacenar variables locales y referencias a objetos con alcance limitado en un
+    programa. Sigue el principio LIFO y es eficiente, pero tiene un tamaño fijo y no almacena objetos complejos, que se gestionan en la memoria 
+    del montón (heap memory). La memoria de la pila es crítica para controlar el flujo del programa y evitar desbordamientos de la pila.
+    
+    Memoria heap:             
+    En Java, la memoria del montón (heap memory) se utiliza para almacenar objetos complejos y dinámicos, como instancias de clases. 
+    Tiene un tamaño variable y se encarga de la gestión automática de la memoria a través del recolector de basura (garbage collector) 
+    para liberar objetos no utilizados. 
+    La memoria del montón es esencial para la creación y gestión de objetos en Java.
