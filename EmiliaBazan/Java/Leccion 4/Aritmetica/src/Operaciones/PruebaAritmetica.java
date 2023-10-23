@@ -24,6 +24,10 @@ public class PruebaAritmetica {
         System.out.println("aritmetica2 a= " + aritmetica2.a);
         System.out.println("aritmetica2 b= " + aritmetica2.b);
         
+        Persona persona = new Persona("Emilia", "Bazán");
+        System.out.println("persona = " + persona);
+        System.out.println("Persona nombre: "+ persona.nombre);
+        System.out.println("Persona apellido: "+ persona.apellido);
     }    
     
     public static void miMetodo() {
@@ -31,3 +35,29 @@ public class PruebaAritmetica {
         System.out.println("Aquí hay otro método");
     }
 }
+
+class Persona{ 
+    String nombre;
+    String apellido;
+
+    public Persona(String nombre, String apellido) {
+        super(); // LLamada al constructor de la clase padre Object 
+        new Imprimir().Imprimir(this);
+        this.nombre = nombre;
+        this.apellido = apellido;
+       
+        System.out.println("Objeto persona usando this: "+ this); 
+    }
+}
+
+class Imprimir{
+    public Imprimir(){
+    super();
+    }
+    
+    public void Imprimir(Persona persona){
+        System.out.println("Persona desde la clase imprimir: "+ persona);
+        System.out.println("Persona desde el objeto actual (this): "+this);
+    }
+}
+

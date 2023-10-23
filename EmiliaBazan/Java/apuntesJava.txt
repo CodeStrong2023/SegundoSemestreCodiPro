@@ -166,7 +166,9 @@ Lección 3: Clases y objetos
                 }
 
     Operador this: Es una variable que apunta al objeto en ejecución, es decir al espacio en memoria donde está guardado el objeto para hacer
-    modificaciones. Hace que se diferencien los atributos de los argumentos.
+    modificaciones. Hace que se diferencien los atributos de los argumentos. Si el ateributo y la variable tienen el mismo nombre, es necesario colocar this al atributo.
+        EJ: this.a=a;
+            this.b=b;
 
     Constructor: Método especial que construye un objeto, reserva un espacio e memoria e inicializa los atributos de la clase.
 
@@ -182,3 +184,28 @@ Lección 3: Clases y objetos
     Tiene un tamaño variable y se encarga de la gestión automática de la memoria a través del recolector de basura (garbage collector) 
     para liberar objetos no utilizados. 
     La memoria del montón es esencial para la creación y gestión de objetos en Java.
+
+    Creación de clases:
+        Solo puede haber una clase del tipo pública. Para crear otra clase, se utiliza sólo la palabra class + el nombre de la clase.
+            class Persona{
+
+            }
+        A esta clase solo se puede acceder dentro del mismo paquete. Le creamos dos atributos.
+            class Persona{ 
+                string nombre;
+                string apellido;
+
+            }
+
+        Agregamos modificadr de acceso: 
+            class Persona{ 
+                String nombre;
+                String apellido;
+
+                public Persona(String nombre, String apellido) {
+                    this.nombre = nombre;
+                    this.apellido = apellido;
+                }
+            }
+
+    Encapsulamiento            
