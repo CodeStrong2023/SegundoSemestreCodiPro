@@ -435,3 +435,35 @@ print(pila)
 elementoBorrado = pila.pop()  # quita el ultimo elemento y lo guarda en la variable
 print(f'Sacamos el elemento: {elementoBorrado}')
 print(f'La pila ahora quedo asi: {pila}')
+
+# Colas con listas
+# Estructura de datos de tipo fifo(first input / first output)
+# Se agregan por orden de llegada, primero en llegar/primero en irse
+cola = [ 'Adriana', 'Adela', 'Pedro', 'Maria']
+
+# Agregamos elementos al final de la cola
+cola.append('Carlos')
+cola.append('Alberto')
+print(cola)
+
+# Sacamos elementos de la cola
+# A medida que avanza la cola quedan menos elementos en la lista
+seRetira = cola.pop(0)
+print(f'Atendido el cliente: {seRetira}')
+print(cola)
+
+seRetira = cola.pop(0)
+print(f'Atendido el cliente: {seRetira}')
+print(cola)
+
+seRetira = cola.pop(0)
+print(f'Atendido el cliente: {seRetira}')
+print(cola)
+
+seRetira = cola.pop(0)
+print(f'Atendido el cliente: {seRetira}')
+print(cola)
+
+seRetira = cola.pop(0)
+print(f'Atendido el cliente: {seRetira}')
+print(cola)
