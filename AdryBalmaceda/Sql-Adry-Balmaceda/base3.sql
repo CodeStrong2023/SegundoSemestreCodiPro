@@ -1,0 +1,1 @@
+SELECT * FROM base3.detalleorden;
