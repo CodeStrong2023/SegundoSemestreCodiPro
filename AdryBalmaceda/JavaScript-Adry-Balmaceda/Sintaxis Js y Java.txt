@@ -1,0 +1,39 @@
+Sintaxis similares entre Java y JavaScript
+
+Operadores Simplificados
++=
+-=
+*=
+/=
+
+Operadores Aritméticos
++
+-
+*
+/
+
+Operadores de Asignación
+=
+
+Operadores de comparación
+== (devuelve resultado booleano True o False)
+
+Documentar
+// = para una línea de comentario
+/*  */ = para múltiples líneas de comentario
+
+Secuencias de Escape
+\ ' = mostrar una comilla simple dentro de una cadena en la salida de información
+\" = mostrar doble comilla dentro de una cadena en la salida de información
+\\ = barra invertida, diagonal inversa, es para mostrar una back slash
+\n = esto es un salto de línea
+\r = retorno
+\t = tabulación
+\b = retroceso
+\f = salto de pagina
+
+Operador de Aumento
+++ (suma de 1 en 1)
+
+Operador de Decremento
+-- (resta de 1 en 1)
