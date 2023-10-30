@@ -70,3 +70,41 @@ def listarNombres(*nombres):  # Normalmente se utiliza: *args
 listarNombres('Lucas', 'Jose', 'Claudia', 'Rosa', 'Maria')
 listarNombres('Marcos', 'Daniel', 'Romina', 'Pepe', 'Marcela', 'Carlos')
 
+def listarTerminos(**terminos):  # lo mas utilizado es **kwargs para recibir argumentos
+    for llave, valor in terminos.items():  # kwargs significa: key word argument
+        print(f'{llave} : {valor}')
+
+listarTerminos()  # no recibe nada, nada se va a mostrar
+listarTerminos(IDE='Integrated Development Environment', PK='Primary Key')
+listarTerminos(Nombre='Leonel Messi')
+
+def desplegarNombres(nombres):
+    for nombre in nombres:
+        print(nombre)
+nombres2 = ['Tito', 'Pedro', 'Carlos']
+desplegarNombres(nombres2)
+desplegarNombres('Carla')
+# desplegarNombres(10, 11)  # no es un objeto iterable
+desplegarNombres((10, 11))  # la convertimos a una tupla
+desplegarNombres([22, 55])  # la convertimos en una lista
+
+# Funciones Recursivas
+def factorial(numero):
+    if numero == 1:  # caso Base
+        return 1
+    else:
+        return numero * factorial(numero-1)  # caso Recursivo
+numeroFactorial = int(input('Digite el numero para calcular el factorial: '))  # ejemplo tarea
+# resultado = factorial(5)  # lo hacemos en codigo duro
+resultado = factorial(numeroFactorial)  # ejemplo tarea
+print(f'El factorial del numero es: {resultado}')
+
+# Tarea: que el usuario ingrese el numero para calcular el factorial
+# Otro ejemplo para comprobar el factorial
+numero = int(input('Digite un numero: '))
+while numero < 0:
+    numero = int(input('Digite un numero mayor a 0: '))
+factorial = 1  # inicializar en 1 para que haga el calculo
+for i in range(1,numero+1):
+    factorial *= i
+print(f'\nEl factorial del numero {numero} ingresado es: {factorial} \nFACTORIAL COMPROBADO')
