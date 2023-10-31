@@ -234,3 +234,7 @@ Funciones recursivas:
             else:
                 return nro * factorial (nro -1) # caso recursivo
                 
+POO 
+
+    Objetos y clases
+        
