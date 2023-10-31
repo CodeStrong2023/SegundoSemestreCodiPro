@@ -214,3 +214,23 @@ Argumentos variables en una función:
             print(nombre)
 listaNombres('Lucas', 'María','Jose','Pablo')
 listaNombres('Pedro','Pablo', 'Mario')
+
+Lista de elementos con funciones (convertir)
+    Recibir para diccionarios liosta de argumentos: **kwargs, que significa key words arguments
+
+    ej: 
+        listarTerminos(**terminos):
+            for llave, valor in terminos.items():
+                print(f'{llave}:{valor}')
+        
+        listarTerminos(IDE='integrated develoment environment', PK='Primary key')
+
+Funciones recursivas:
+    Son las que se llaman a si mismas para completar una tarea, necesitan un caso base y un caso recursivo (dos etapas).
+    Factirual de un numero con una funcoin redcursiva:
+        def factorial(nro):
+            if nro == 0 # Caso base 
+                return 1
+            else:
+                return nro * factorial (nro -1) # caso recursivo
+                
