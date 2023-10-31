@@ -143,4 +143,74 @@ Funciones
         def miFuncion():
             *Aqué debajo se coloca identado lo que queremos que la función haga.
 
-            
+Desempaquetado de listas y disccionarios:
+    Definimos una función show:
+        def show(nombre, apellido)
+
+    Definimo suna lista y un diccionario:
+        persona = ["Emilia, "Bazán"]
+        persona2 = {"apellido" : "Betancud"; "nombre": "Ariel"}
+        
+
+    Mostramos los elementos de la lista llamando a la función, colocando el nombre de la lista precedido de un asterisco:
+    show(*persona)
+
+    Mostramos los elementos del diccionario llamando a la función, colocando el nombre de la lista precedido de dos asteriscos:
+    show(**persona2)
+
+Lista de compresión
+    Sirve para usar elementos utiles de listas, diccionarios o tuplas sin modificarlas.
+
+        ej con lista:
+
+        nombres = ["Paolo","Rodrigo","Lupe", "Pepe"]
+        alongP = [p for p in nombres if p[0]=='p'] # Esto devuelve una nueva lista dónde se muestren los nombres con P.
+        pint[alongP]
+        
+        ej con diccionario:
+
+        botellaC =  [{"name" : "Quilmes", "pais": "Argentina"}, 
+                    {"name" : "Corona", "pais": "Mx"},
+                    {"name" : "Stella Artois", "pais": "Bélgica"}]
+
+        arg = [b for b in botellaC if b[pais]=="Argentina"] 
+
+        print[arg]           
+
+Paso de argumentos
+
+    mi_funcion2(name, lastName);
+    print(Saludos a todos los que nos ven a través del canal de youtube)
+    printo(f'Nombre: {name}, apellido: {lastName}')
+
+    llamamos la funcion y pasamos los argumentos:
+    mi_funcion2('Emilia','Bazán')
+    mi_funcion2('Pedro','Perez')
+
+Palabra return:
+    Creamos una función para sumar:
+        def sumar(a,b):
+            return a + b
+        resultado = sumar(78, 82)    
+        print(f' El resultado de las uma es:{resultado}')
+
+        Se puede llamar a la función de la siguiente manera:
+        print{f'El resltado de la suma es:{sumar{22,12}}}
+
+Valores por default de argumentos:
+    Se otorga a las variables un valor por default para que no salga un error si no se asignan valores a las variables.
+    
+    definimos otra funcion sumar
+        def sumar2(a = 0,b = 0):
+            return a + b
+        resultasdo = sumar()    
+            print(f' El resultado de las uma es:{resultado}')
+            print{f'El resltado de la suma es:{sumar{22,12}}}
+
+Argumentos variables en una función:
+    se usa cuando se desconoce la cantidad de argumentos que tendrá una lista que pueden variar, se añaden a la funcion 
+    def listarNombres(*nombres): # Normalmente se utiliza *args
+        for nombre in nombres:
+            print(nombre)
+listaNombres('Lucas', 'María','Jose','Pablo')
+listaNombres('Pedro','Pablo', 'Mario')

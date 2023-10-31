@@ -42,3 +42,15 @@
 #     else:
 #         print('Dato inválido, vuelva a ingresar')
 
+# 6.9.1 Ejercicio Funciones 01:
+#     Crear una función para sumar los valores recibidos del tipo numerico utilizando argumentos variables *args
+#     como parametro de la función agregar como resultado la suma de todos los valores pasados como argumentos.
+
+# def nro(*args):
+#     resultado = 0
+#     for valor in args:
+#         resultado += valor
+#     return resultado
+
+# print(f'La suma de los numeros ingresados es: {nro(3,8,6)} ')   
+
