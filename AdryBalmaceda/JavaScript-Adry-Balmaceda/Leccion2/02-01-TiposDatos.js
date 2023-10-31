@@ -33,7 +33,7 @@ console.log(objeto);
 
 // Tipo de dato boolean
 var bandera = true;
-console.log(typeof bandera)
+console.log(typeof bandera);
 
 // Tipo de dato funcion
 function miFuncion(){}
@@ -73,4 +73,4 @@ console.log(typeof autos);  // preguntamos que tipo de dato es:
 
 var z = '';  // si no pusieramos = '' nos mostraria undefined
 console.log(z);  // esto se refiere a que es una cadena vacia:
-console.log(typeof z)
+console.log(typeof z);
