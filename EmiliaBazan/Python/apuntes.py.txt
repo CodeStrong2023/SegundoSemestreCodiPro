@@ -99,7 +99,7 @@ Colecciones en Python
             conjunto = frozenset // Hace que el conjunto sea totalmente inmutable, no se puede agregar ni quitar elementos
             
 
-    Disccionarios
+    Diccionarios
         Estan compuestos por dos elementos; el par clave (llave, key), valor (value). Los elementos no poseen indices, se accede a los valores a través de
         las claves.
         Sintaxis:
@@ -238,3 +238,7 @@ POO
 
     Objetos y clases
         
+Encapsulamiento
+    Con el doble guión bajo en el atributo se lo encapsula totalmente impidiendo acceder a el.
+    Con un guión bajo, queda parcialemente encapsulado; porque no se muestra entre las opciones pero tipeando el atributo completo se
+    puede acceder a el, es una mala práctica; no usar.
