@@ -16,6 +16,7 @@ class Persona:  # creamos un clase
    def mostrar_detalle(self):  # self es igual a this
       print(f'La clase Persona tiene los siguientes datos: {self.nombre} {self._dni} {self.apellido} {self.edad}, la direccion es: {self.args}, los datos importantes son: {self.kwargs}')
 
+
 # print(type(Persona))
 persona1 = Persona('Arturo', 'Baldo',32466789, 70)  # necesitamos enviar argumentos
 
@@ -46,3 +47,6 @@ persona3 = Persona('Rogelio', 'Romero',25333900, 22, 'Telefono', '261444555', 'C
 persona3.mostrar_detalle()
 # print(persona3._dni)  # esto no se debe utilizar (esta encapsulado) esto dice que lo desconocemos
 # persona3.__nombre  # esta totalmente encapsulado
+
+
+
