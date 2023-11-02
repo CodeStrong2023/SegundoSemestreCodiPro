@@ -3,6 +3,8 @@
 private: atributo encapsulado
 constructor: es para inicializar el nombre con insert code
 metodos: getter and setter con insert code
+
+ *Matrices: Matriz de objetos
  */
 package domain;
 
