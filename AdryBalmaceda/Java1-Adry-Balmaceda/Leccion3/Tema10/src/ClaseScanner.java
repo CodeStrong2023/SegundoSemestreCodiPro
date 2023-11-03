@@ -24,7 +24,7 @@ public class ClaseScanner {
               System.out.println(miVariableCadena);
               //Ctrl + clic muestra donde fue instanciada miVariableCadena
          */
-        //Var: interferencia de tipos en Java
+        //Var: inferencia de tipos en Java
         /*
       var miVariableEntera2 = 10;
       var miVariableCadena2 = "Seguimos estudiando";
