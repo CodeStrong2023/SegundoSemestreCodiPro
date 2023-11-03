@@ -13,8 +13,8 @@ import javax.swing.JOptionPane;
 public class Matriz_Ejercicio_5 {
 
     public static void main(String[] args) {
-        int nF = Integer.parseInt(JOptionPane.showInputDialog("Ingresar el numero de filas para llenar la matriz"));
-        int mC = Integer.parseInt(JOptionPane.showInputDialog("Ingresar el numero de columnas para llenar la matriz"));
+        int nF = Integer.parseInt(JOptionPane.showInputDialog("Digite el numero de filas del 1 a 3"));  
+        int mC = Integer.parseInt(JOptionPane.showInputDialog("Digite el numero de columnas del 1 a 3"));
         int posF;
         int posC;
         int sumaF;
@@ -24,7 +24,7 @@ public class Matriz_Ejercicio_5 {
         // Para llenar la matriz
         for (int i = 0; i < nF; i++) {
             for (int j = 0; j < mC; j++) {
-                matriz[i][j] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero de posiciones para filas y columnas: [" + (i + 1) + "," + (j + 1) + "]"));
+                matriz[i][j] = Integer.parseInt(JOptionPane.showInputDialog("Digite numeros de posiciones para filas y columnas: [" + (i + 1) + "," + (j + 1) + "]"));
 
             }
         }
@@ -33,7 +33,7 @@ public class Matriz_Ejercicio_5 {
         for (int i = 0; i < nF; i++) {
             for (int j = 0; j < mC; j++) {
                 resultado += matriz[i][j];
-                resultado += " ";
+                resultado += " - ";
             }
             resultado += "\n";
         }
@@ -64,15 +64,16 @@ public class Matriz_Ejercicio_5 {
         }
         System.out.println("\nSuma Filas");
         for (int i = 0; i < nF; i++) {
-            System.out.println(filas[i]+"-");
+            System.out.print(filas[i]+" - ");  //sintaxis sin ln: para imprimir los numeros en un mismo renglon
             
         }
-        
+        System.out.println("");
         
         System.out.println("\nSuma Columnas");
         for (int j = 0; j < mC; j++) {
-            System.out.println(columnas[j]+"-");
+            System.out.print(columnas[j]+" - ");
             
         }
+        System.out.println("");
     }
 }
