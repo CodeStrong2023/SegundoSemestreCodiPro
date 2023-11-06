@@ -1,1 +1,4 @@
-console.log("Hola Mundo!")
+var nombre = "Emilia";
+nombre = "María \nEmilia"
+
+console.log(nombre);
