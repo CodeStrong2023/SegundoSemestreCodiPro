@@ -114,3 +114,102 @@ switch(mes){//No solo se puede utilizar numero, tambien cadenas
 
 }
 console.log("Bienvenidos a la estacion de: "+estacion)
+
+//Evitar repetir tu codigo
+//Dry dont repeat yourself
+//let days = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo'];
+let days = 8
+switch (days) {
+    case 1:
+        console.log('Hoy es Lunes');
+        break;
+    case '2':
+        console.log('Hoy es Martes');
+        break;
+    case 3:
+        console.log('Hoy es Miercoles');
+        break;
+    case 4:
+        console.log('Hoy es Jueves');
+        break;
+    case 5:
+        console.log('Hoy es Viernes');
+        break;
+    case 6:
+        console.log('Hoy es Sabado');
+        break;
+    case 7:
+        console.log('Hoy es Domingo');
+        break;
+    default:
+        console.log("Error, ese numero no corresponde a un dia de la semana")
+        break;
+}
+//Version mejorada
+
+let days2 = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo'];
+
+function getDay(n){
+    if(n < 1 || n > 7){
+        throw new Error('out of range');
+    }
+    return days2[n-1];
+}
+console.log(getDay(4));
+//Hacer un ejercicio similar al que esta hecho, pero ahora con los
+//meses del anio, debes hacerlo con la estructura switch y luego con
+//la funcion en la opcion mejorada
+let mes1 = 4;
+switch(mes1){
+    case 1:
+        console.log("Es enero");
+        break;
+    case 2:
+        console.log("Es Febrero");
+        break;
+    case 3:
+        console.log("Es Marzo");
+        break;
+    case 4:
+        console.log("Es Abril");
+        break;
+    case 5:
+        console.log("Es mayo");
+        break;
+    case 6:
+        console.log("Es Junio");
+        break;
+    case 7:
+        console.log("Es Julio");
+        break;
+    case 8:
+        console.log("Es Agosto");
+        break;
+    case 9:
+        console.log("Es Septiembre");
+        break;
+    case 10:
+        console.log("Es Octubre");
+        break;
+    case 11:
+        console.log("Es Noviembre");
+        break;
+    case 12:
+        console.log("Es Diciembre, felices fiestas :)");
+        break;
+    default:
+        console.log("El numero ingresado no corresponde a un mes del anio :(")
+        break;
+}
+
+//Version mejorada
+
+let mes3 = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre, felices fiestas :p']
+
+function getMes(n){
+    if (n < 1 || n > 12){
+        throw new Error ("El numero ingresado no corrresponde a ningun mes")
+    }
+    return mes3[n-1];
+}
+console.log(getMes(12))
