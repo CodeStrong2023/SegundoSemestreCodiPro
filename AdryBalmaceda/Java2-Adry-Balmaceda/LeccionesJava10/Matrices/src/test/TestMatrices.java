@@ -47,8 +47,8 @@ public class TestMatrices {
         // String frutas[][] = new String[3][2];
 
         // Sintaxis simplificada
-        String frutas[][] = {{"Limon", "Pomelo"}, {"Ciruela", "Kiwi"}, {"Banana", "Manzana"}};
-        imprimir(frutas);
+//        String frutas[][] = {{"Limon", "Pomelo"}, {"Ciruela", "Kiwi"}, {"Banana", "Manzana"}};
+//        imprimir(frutas);
 //        System.out.println("Ejemplo de matriz con sintaxis simplificada");
 //        for (int i = 0; i < frutas.length; i++) {
 //            for (int j = 0; j < frutas[i].length; j++) {
@@ -57,25 +57,24 @@ public class TestMatrices {
 //        }
         // 5. Matriz de objetos
         // Crear matriz
-        Persona personas[][] = new Persona[2][3];
-        // Asignar valores a la matriz
-        // Asignacion de forma manual, instanciar
-        personas[0][0] = new Persona("Axel");
-        personas[0][1] = new Persona("Olga");  // Tarea: completar los elementos de la matriz
-        personas[0][2] = new Persona("Patricia");  // tarea
-        personas[1][0] = new Persona("Miriam");
-        personas[1][1] = new Persona("Alberto");
-        personas[1][2] = new Persona("Juan");
-        imprimir(personas);  // llamamos al metodo tipo object
-    }
-
-    // Crear un metodo: tipo object
-    public static void imprimir(Object matriz[][]) {  // Object matriz[][] es como definir la variable del lado izquierdo, apunta a la referencia del objeto matriz
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                System.out.println("matriz " + i + "-" + j + ": " + matriz[i][j]);
-            }
-        }
+//        Persona personas[][] = new Persona[2][3];
+//        // Asignar valores a la matriz
+//        // Asignacion de forma manual, instanciar
+//        personas[0][0] = new Persona("Axel");
+//        personas[0][1] = new Persona("Olga");  // Tarea: completar los elementos de la matriz
+//        personas[0][2] = new Persona("Patricia");  // tarea
+//        personas[1][0] = new Persona("Miriam");
+//        personas[1][1] = new Persona("Alberto");
+//        personas[1][2] = new Persona("Juan");
+//        imprimir(personas);  // llamamos al metodo tipo object
+//    }
+        // Crear un metodo: tipo object
+//    public static void imprimir(Object matriz[][]) {  // Object matriz[][] es como definir la variable del lado izquierdo, apunta a la referencia del objeto matriz
+//        for (int i = 0; i < matriz.length; i++) {
+//            for (int j = 0; j < matriz[i].length; j++) {
+//                System.out.println("matriz " + i + "-" + j + ": " + matriz[i][j]);
+////            }
+//        }
     }// LLamar a este metodo: para eso comentamos el ciclo for de matriz frutas para comprobar que funciona bien
 
 }
