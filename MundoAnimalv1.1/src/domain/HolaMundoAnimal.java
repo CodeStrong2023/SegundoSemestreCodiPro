@@ -26,19 +26,20 @@ public class HolaMundoAnimal {
         matriz[2][1] = 5613;
         matriz[2][2] = 5620;
         int costoDeEnvio = elegirCodigoPostal(matriz);
-        int precio_del_producto = 0;
-
-//        String[][] matrizProductos = new String[1][6];
-//        matrizProductos[0][0] = "1. Kit descanso perro chico $3000";
-//        matrizProductos[0][1] = "2. Kit descanso perro grande $3500";
-//        matrizProductos[0][2] = "3. Kit baño perro chico $4000";
-//        matrizProductos[0][3] = "4. Kit baño perro grande $4500";
-//        matrizProductos[0][4] = "5. Kit paseo perro chico $5000";
-//        matrizProductos[0][5] = "6. Kit paseo perro grande $5500";
-//
-//        int precio_del_producto = agregarProducto(matrizProductos);
-//
+        
+        String[][] matrizProductos = new String[1][6];
+        matrizProductos[0][0] = "1. Kit descanso perro chico $3000";
+        matrizProductos[0][1] = "2. Kit descanso perro grande $3500";
+        matrizProductos[0][2] = "3. Kit baño perro chico $4000";
+        matrizProductos[0][3] = "4. Kit baño perro grande $4500";
+        matrizProductos[0][4] = "5. Kit paseo perro chico $5000";
+        matrizProductos[0][5] = "6. Kit paseo perro grande $5500";
+        
+        
+        int precio_del_producto = agregarProducto(matrizProductos);
+        
         validarTarjetaDebito(costoDeEnvio, precio_del_producto);
+        
     }
 
     public static int elegirCodigoPostal(int[][] matriz) {
@@ -124,26 +125,6 @@ public class HolaMundoAnimal {
             direc = scanner.nextLine();
         }
 
-        //1.Llenar matriz de productos
-        String[][] matrizProductos = new String[1][6];
-
-        matrizProductos[0][0] = "1. Kit descanso perro chico $3000";
-        matrizProductos[0][1] = "2. Kit descanso perro grande $3500";
-        matrizProductos[0][2] = "3. Kit baño perro chico $4000";
-        matrizProductos[0][3] = "4. Kit baño perro grande $4500";
-        matrizProductos[0][4] = "5. Kit paseo perro chico $5000";
-        matrizProductos[0][5] = "6. Kit paseo perro grande $5500";
-
-        int producto = agregarProducto(matrizProductos);
-        int precio_del_producto = 0;
-        //validarTarjetaDebito(costoDeEnvio, precio_del_producto);
-
-        if (producto > 0) {
-
-            System.out.println("El precio del producto es de $" + producto);
-        } else {
-            System.out.println("No se puede calcular el precio del producto. \nComuníquese con Atención al cliente.");
-        }
         return costoDeEnvio;
     }
 
@@ -278,7 +259,7 @@ public class HolaMundoAnimal {
                 mes = scanner.nextInt();
                 System.out.println("Ingrese el año de vencimiento de su tarjeta en formato (AA): ");
                 anio = scanner.nextInt();
-                System.out.println("Ahora sí, es correcto");
+                System.out.println("Es correcto");
                 break;
             }         
         } while (mes>=1&&mes<=12&&anio>=24&&anio<=99);  
