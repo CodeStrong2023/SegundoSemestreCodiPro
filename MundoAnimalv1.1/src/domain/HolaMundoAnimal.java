@@ -241,6 +241,7 @@ public class HolaMundoAnimal {
         int longTarjeta;
         String codigoSeguridad;
         int longCodigo;
+        int mes, anio;
 
         do {
             System.out.println("Ingrese el número de su tarjeta de débito (deben ser 16 dígitos): ");
@@ -261,8 +262,28 @@ public class HolaMundoAnimal {
             }
         } while (longCodigo != 3);
         System.out.println("El codigo ingresado es válido");
+        
+        do{
+            System.out.println("Ingrese el mes de vencimiento de su tarjeta(MM): ");
+            mes = scanner.nextInt();        
+            System.out.println("Ingrese el año de vencimiento de su tarjeta en formato(AA): ");
+            anio = scanner.nextInt();
+            if (mes>=1&&mes<=12&&anio>=24&&anio<=99) {
+                System.out.println("La fecha de vencimiento es válida");
+                break;
+               } 
+            else{
+                System.out.println("La fecha de vencimiento NO es válida, intente nuevamente");
+                System.out.println ("Ingrese el mes de vencimiento de su tarjeta(MM): ");
+                mes = scanner.nextInt();
+                System.out.println("Ingrese el año de vencimiento de su tarjeta en formato (AA): ");
+                anio = scanner.nextInt();
+                System.out.println("Ahora sí, es correcto");
+                break;
+            }         
+        } while (mes>=1&&mes<=12&&anio>=24&&anio<=99);  
+        System.out.println("Finalizado, pago realizado exitosamente ¡Gracias por su compra!");
     }
-
     private static void mostrarMensajeDespedida() {
         JOptionPane.showMessageDialog(null, "¡Gracias por utilizar el sistema! ¡Hasta luego!");
     }
