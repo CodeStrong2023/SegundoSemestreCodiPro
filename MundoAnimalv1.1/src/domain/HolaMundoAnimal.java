@@ -7,13 +7,11 @@ public class HolaMundoAnimal {
 
     //Inicio de sistema de envio
     public static void main(String[] args) {
-           
-        System.out.println("""
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                %%%%%%%%%%%%%%%%%%%%%%%%%% BIENVENIDOS AL SISTEMA DE PAGO DE LA PAGINA %%%%%%%%%%%%%%%%%%%%%%%%%%
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HOLA MUNDO ANIMAL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                """);
+
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+                + "%%%%%%%%%%%%%%%%%%%%%%%%%% BIENVENIDOS AL SISTEMA DE PAGO DE LA PAGINA %%%%%%%%%%%%%%%%%%%%%%%%%%"
+                + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HOLA MUNDO ANIMAL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+                + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
         // Proceso envío
         int[][] matriz = new int[3][3]; //Llenamos la matriz con los codigos postales de las localidades de Mendoza
@@ -28,18 +26,18 @@ public class HolaMundoAnimal {
         matriz[2][1] = 5613;
         matriz[2][2] = 5620;
         int costoDeEnvio = elegirCodigoPostal(matriz);
-        
-        String[][] matrizProductos = new String[1][6];
-        matrizProductos[0][0] = "1. Kit descanso perro chico $3000";
-        matrizProductos[0][1] = "2. Kit descanso perro grande $3500";
-        matrizProductos[0][2] = "3. Kit baño perro chico $4000";
-        matrizProductos[0][3] = "4. Kit baño perro grande $4500";
-        matrizProductos[0][4] = "5. Kit paseo perro chico $5000";
-        matrizProductos[0][5] = "6. Kit paseo perro grande $5500";
-        
-        
-        int precio_del_producto = agregarProducto(matrizProductos);
-        
+        int precio_del_producto = 0;
+
+//        String[][] matrizProductos = new String[1][6];
+//        matrizProductos[0][0] = "1. Kit descanso perro chico $3000";
+//        matrizProductos[0][1] = "2. Kit descanso perro grande $3500";
+//        matrizProductos[0][2] = "3. Kit baño perro chico $4000";
+//        matrizProductos[0][3] = "4. Kit baño perro grande $4500";
+//        matrizProductos[0][4] = "5. Kit paseo perro chico $5000";
+//        matrizProductos[0][5] = "6. Kit paseo perro grande $5500";
+//
+//        int precio_del_producto = agregarProducto(matrizProductos);
+//
         validarTarjetaDebito(costoDeEnvio, precio_del_producto);
     }
 
@@ -57,46 +55,47 @@ public class HolaMundoAnimal {
             }
             matrizTexto.append("\n");
         }
-        
+
         //Con el ciclo While solicitamos el CP y asignamos el precio correspondente a cada uno
         while (!postal) {
             String codigoStr = JOptionPane.showInputDialog("Digite el código postal al que quiere recibir su pedido: \n" + matrizTexto.toString());
             int nuevoCosto = -1;
             //Si se presiona cancelar en el cuadro de diálogo
-            if (codigoStr == null){
+            if (codigoStr == null) {
                 mostrarMensajeDespedida();
-                }
-                   
-            
+            }
+
             int codigo = Integer.parseInt(codigoStr);
-                                
+
             switch (codigo) {
-                case 5515 -> {
+                case 5515: {
                     nuevoCosto = 1000;
                     System.out.println("El codigo postal ingresado corresponde a Maipu");
                 }
-                case 5521 -> {
+                case 5521: {
                     nuevoCosto = 1200;
                     System.out.println("El codigo postal ingresado corresponde a Guaymallen");
 
                 }
-                case 5501 -> {
+                case 5501: {
                     nuevoCosto = 1300;
                     System.out.println("El codigo postal ingresado corresponde a Godoy Cruz");
                 }
-                case 5500 -> {
+                case 5500: {
                     nuevoCosto = 1400;
                     System.out.println("El codigo postal ingresado corresponde a Menddoza");
                 }
-                case 5539 -> {
+                case 5539: {
                     nuevoCosto = 1550;
                     System.out.println("El codigo postal ingresado corresponde a Las Heras");
                 }
-                case 5507 -> {
+                case 5507: {
                     nuevoCosto = 1700;
                     System.out.println("El codigo postal ingresado corresponde a Lujan De Cuyo");
                 }
-                case 5600, 5613, 5620 -> {
+                case 5600:
+                case 5613:
+                case 5620: {
                     System.out.println("Las zonas de San Rafael, Malargue y General Alvear no tienen costo agregado de entrega :) ");
                     nuevoCosto = 0;
                 }
@@ -106,8 +105,7 @@ public class HolaMundoAnimal {
                 System.out.println("El costo de envío es de $" + nuevoCosto);
                 costoDeEnvio = nuevoCosto;
                 postal = true;
-            }                    
-            else {
+            } else {
                 System.out.print("El código postal que indicó no está dentro de nuestras zonas de envíos a Domicilio");
                 System.out.print("\n¿Desea volver a intentar? (S/N): ");
                 String respuesta = scanner.next();
@@ -127,7 +125,7 @@ public class HolaMundoAnimal {
         }
 
         //1.Llenar matriz de productos
-       String[][] matrizProductos = new String[1][6];
+        String[][] matrizProductos = new String[1][6];
 
         matrizProductos[0][0] = "1. Kit descanso perro chico $3000";
         matrizProductos[0][1] = "2. Kit descanso perro grande $3500";
@@ -137,18 +135,17 @@ public class HolaMundoAnimal {
         matrizProductos[0][5] = "6. Kit paseo perro grande $5500";
 
         int producto = agregarProducto(matrizProductos);
+        int precio_del_producto = 0;
+        //validarTarjetaDebito(costoDeEnvio, precio_del_producto);
 
         if (producto > 0) {
 
             System.out.println("El precio del producto es de $" + producto);
         } else {
             System.out.println("No se puede calcular el precio del producto. \nComuníquese con Atención al cliente.");
-
         }
-       
         return costoDeEnvio;
     }
-
 
     public static int agregarProducto(String[][] matrizProductos) {
         Scanner scanner = new Scanner(System.in);
@@ -166,44 +163,40 @@ public class HolaMundoAnimal {
             matrizP.append("\n");
         }
 
-   
-       
         //4.Ciclo While para solicitar el producto y asignar el precio correspondiente
         while (!codigop) {
-            
-            String productoStr = JOptionPane.showInputDialog("Digite el CÓDIGO del producto que desea: \n" + matrizP.toString());            
-             int precio_del_producto = -1;
+
+            String productoStr = JOptionPane.showInputDialog("Digite el CÓDIGO del producto que desea: \n" + matrizP.toString());
+            int precio_del_producto = -1;
             //Si se presiona cancelar en el cuadro de diálogo
-            if (productoStr == null){
+            if (productoStr == null) {
                 mostrarMensajeDespedida();
-                }
-            
+            }
+
             int producto = Integer.parseInt(productoStr);
-            
-         
 
             switch (producto) {
-                case 1 -> {
+                case 1: {
                     precio_del_producto = 3000;
                     System.out.println("Kit: Cama chica, manta chica, ropa");
                 }
-                case 2 -> {
+                case 2: {
                     precio_del_producto = 3500;
                     System.out.println("Kit: Cama grande, manta grande, ropa");
                 }
-                case 3 -> {
+                case 3: {
                     precio_del_producto = 4000;
                     System.out.println("Kit: Shampoo, cepillo, toalla chica");
                 }
-                case 4 -> {
+                case 4: {
                     precio_del_producto = 4500;
                     System.out.println("Kit: Shampoo, cepillo, toalla grande");
                 }
-                case 5 -> {
+                case 5: {
                     precio_del_producto = 5000;
                     System.out.println("kit: correa, pretal chico, porta bolsa para juntar heces");
                 }
-                case 6 -> {
+                case 6: {
                     precio_del_producto = 5500;
                     System.out.println("kit: correa, pretal chico, porta bolsa para juntar heces");
                 }
@@ -227,7 +220,7 @@ public class HolaMundoAnimal {
         if (codigop) {
             System.out.println("A continuación ingrese sus DATOS para confirmar la compra del producto");
             System.out.print("Digite su NOMBRE y APELLIDO: ");
-            scanner.nextLine();
+            //scanner.nextLine();
             nombre = scanner.nextLine();
             JOptionPane.showMessageDialog(null, "DATOS ingresados:\n " + nombre);
             System.out.print("Confirme los DATOS ingresados: " + nombre + "\n¿Es correcto? S/N: \nSi NO es correcto ingrese sus datos nuevamente, \nSino presione ENTER: ");
@@ -236,14 +229,13 @@ public class HolaMundoAnimal {
         }
         return precio;
     }
-    
+
     public static void validarTarjetaDebito(int costoDeEnvio, int precio_del_producto) {
         Scanner scanner = new Scanner(System.in);
-       
+
         System.out.println("Recuerde que solo puede pagar con tarjeta de débito");
         double precioFinal = costoDeEnvio + precio_del_producto;
         System.out.println("El monto total a pagar es: " + precioFinal);
-
 
         String numeroTarjeta;
         int longTarjeta;
@@ -270,11 +262,8 @@ public class HolaMundoAnimal {
         } while (longCodigo != 3);
         System.out.println("El codigo ingresado es válido");
     }
-    
+
     private static void mostrarMensajeDespedida() {
         JOptionPane.showMessageDialog(null, "¡Gracias por utilizar el sistema! ¡Hasta luego!");
-    }  
+    }
 }
-    
-  
-
