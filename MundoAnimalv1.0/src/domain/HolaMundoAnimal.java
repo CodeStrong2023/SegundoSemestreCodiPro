@@ -33,7 +33,7 @@ public class HolaMundoAnimal {
         matrizProductos[0][3] = "4. Kit baño perro grande $4500";
         matrizProductos[0][4] = "5. Kit paseo perro chico $5000";
         matrizProductos[0][5] = "6. Kit paseo perro grande $5500";
-        5501
+        
         
         int precio_del_producto = agregarProducto(matrizProductos);
         
