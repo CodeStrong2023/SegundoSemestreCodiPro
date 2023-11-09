@@ -24,8 +24,20 @@ public class HolaMundoAnimal {
         matriz[2][0] = 5600;
         matriz[2][1] = 5613;
         matriz[2][2] = 5620;
-        int costo = elegirCodigoPostal(matriz);
-
+        int costoDeEnvio = elegirCodigoPostal(matriz);
+        
+        String[][] matrizProductos = new String[1][6];
+        matrizProductos[0][0] = "1. Kit descanso perro chico $3000";
+        matrizProductos[0][1] = "2. Kit descanso perro grande $3500";
+        matrizProductos[0][2] = "3. Kit baño perro chico $4000";
+        matrizProductos[0][3] = "4. Kit baño perro grande $4500";
+        matrizProductos[0][4] = "5. Kit paseo perro chico $5000";
+        matrizProductos[0][5] = "6. Kit paseo perro grande $5500";
+        5501
+        
+        int precio_del_producto = agregarProducto(matrizProductos);
+        
+        validarTarjetaDebito(costoDeEnvio, precio_del_producto);
     }
 
     public static int elegirCodigoPostal(int[][] matriz) {
@@ -109,12 +121,8 @@ public class HolaMundoAnimal {
             direc = scanner.nextLine();
         }
 
-        
-    
-        //fin sistema de envio
-
         //1.Llenar matriz de productos
-        String[][] matrizProductos = new String[1][6];
+       /* String[][] matrizProductos = new String[1][6];
 
         matrizProductos[0][0] = "1. Kit descanso perro chico $3000";
         matrizProductos[0][1] = "2. Kit descanso perro grande $3500";
@@ -131,9 +139,11 @@ public class HolaMundoAnimal {
         } else {
             System.out.println("No se puede calcular el precio del producto. \nComuníquese con Atención al cliente.");
 
-        }
+        }*/
+       
+        return costoDeEnvio;
     }
-    
+
 
     public static int agregarProducto(String[][] matrizProductos) {
         Scanner scanner = new Scanner(System.in);
@@ -216,5 +226,41 @@ public class HolaMundoAnimal {
         }
         return precio;
     }
+    
+    public static void validarTarjetaDebito(int costoDeEnvio, int precio_del_producto) {
+        Scanner scanner = new Scanner(System.in);
+       
+        System.out.println("Recuerde que solo puede pagar con tarjeta de débito");
+        double precioFinal = costoDeEnvio + precio_del_producto;
+        System.out.println("El monto total a pagar es: " + precioFinal);
 
+
+        String numeroTarjeta;
+        int longTarjeta;
+        String codigoSeguridad;
+        int longCodigo;
+
+        do {
+            System.out.println("Ingrese el número de su tarjeta de débito (deben ser 16 dígitos): ");
+            numeroTarjeta = scanner.next();
+            longTarjeta = numeroTarjeta.length();
+            if (longTarjeta != 16) {
+                System.out.println("El número de la tarjeta debe contener exactamente 16 dígitos. Intente nuevamente");
+            }
+        } while (longTarjeta != 16);
+        System.out.println("El número de la tarjeta es válido");
+
+        do {
+            System.out.println("Ingrese el código de seguridad de su tarjeta (son los 3 dígitos que se encuentran en la parte posterior de su tarjeta):");
+            codigoSeguridad = scanner.next();
+            longCodigo = codigoSeguridad.length();
+            if (longCodigo != 3) {
+                System.out.println("El código de seguridad es incorrecto, ingréselo nuevamente: ");
+            }
+        } while (longCodigo != 3);
+        System.out.println("El codigo ingresado es válido");
+    }
 }
+    
+    
+
