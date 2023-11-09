@@ -97,8 +97,16 @@ public class MundoAnimalv {
                     nuevoCosto = 1700;
                     System.out.println("El código postal ingresado corresponde a Lujan De Cuyo");
                 }
-                case 5600, 5613, 5620 -> {
-                    System.out.println("Las zonas de San Rafael, Malargue y General Alvear no tienen costo agregado de entrega :) ");
+                case 5600 -> {
+                    System.out.println("El codigo postal ingresado corresponde a San Rafael y no tiene costo agregado");
+                    nuevoCosto = 0;
+                }
+                case  5613 -> {
+                    System.out.println("El codigo postal ingresado corresponde a Malargue y no tiene costo agregado");
+                    nuevoCosto = 0;
+                }
+                case  5620 -> {
+                    System.out.println("El codigo postal ingresado corresponde a General Alvear y no tiene costo agregado");
                     nuevoCosto = 0;
                 }
             }
