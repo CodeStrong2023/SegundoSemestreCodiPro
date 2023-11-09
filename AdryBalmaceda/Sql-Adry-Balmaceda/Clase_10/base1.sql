@@ -1,0 +1,1 @@
+SELECT * FROM base1.usuario;
