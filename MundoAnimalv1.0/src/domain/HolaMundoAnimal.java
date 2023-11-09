@@ -1,3 +1,5 @@
+//V1.0
+
 package domain;
 
 import java.util.Scanner;
@@ -120,26 +122,6 @@ public class HolaMundoAnimal {
             System.out.print("Sí ingresó mal la dirección, vuelva a ingresarla, de lo contrario presione ENTER: ");
             direc = scanner.nextLine();
         }
-
-        //1.Llenar matriz de productos
-       /* String[][] matrizProductos = new String[1][6];
-
-        matrizProductos[0][0] = "1. Kit descanso perro chico $3000";
-        matrizProductos[0][1] = "2. Kit descanso perro grande $3500";
-        matrizProductos[0][2] = "3. Kit baño perro chico $4000";
-        matrizProductos[0][3] = "4. Kit baño perro grande $4500";
-        matrizProductos[0][4] = "5. Kit paseo perro chico $5000";
-        matrizProductos[0][5] = "6. Kit paseo perro grande $5500";
-
-        int producto = agregarProducto(matrizProductos);
-
-        if (producto > 0) {
-
-            System.out.println("El precio del producto es de $" + producto);
-        } else {
-            System.out.println("No se puede calcular el precio del producto. \nComuníquese con Atención al cliente.");
-
-        }*/
        
         return costoDeEnvio;
     }
