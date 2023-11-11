@@ -6,8 +6,13 @@ realmente diriamos que es identica
 Variables: son dinamicas en JavaScript, se puede
 modificar el mismo tipo de dato reutilizando la misma
 variable 
-ctrl+shift+p: para ejecutar
+ctrl+shift+p: para ejecutar y para parar la ejecucion
 ctrl+s: para guardar
+typeof: sintaxis para mostrar el tipo de dato
+
+Archivo index.html: clic derecho + open in browser
+se abre el navegador: clic derecho + inspeccionar
+pestaña consola: boton F5 para actualizar la pagina
 */
 // Datos de tipo String
 var nombre = 'Adriana';
@@ -28,7 +33,7 @@ console.log(objeto);
 
 // Tipo de dato boolean
 var bandera = true;
-console.log(typeof bandera)
+console.log(typeof bandera);
 
 // Tipo de dato funcion
 function miFuncion(){}
@@ -53,3 +58,19 @@ console.log(typeof Persona);
 var x;
 console.log(typeof x);
 
+x = undefined;
+console.log(typeof x);
+
+// null: significa ausencia de valor
+var y = null;  // null no es un tipo de dato, pero su origen es de tipo object
+console.log(typeof y);
+
+// Tipo de dato array y Empty String
+// Los arreglos en Javascript son de tipo object, diferencia con Java
+var autos = ['Citroen', 'Audi', 'BMW', 'Ford'];
+console.log(autos);
+console.log(typeof autos);  // preguntamos que tipo de dato es:
+
+var z = '';  // si no pusieramos = '' nos mostraria undefined
+console.log(z);  // esto se refiere a que es una cadena vacia:
+console.log(typeof z);

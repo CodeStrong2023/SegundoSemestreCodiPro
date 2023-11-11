@@ -1,0 +1,211 @@
+JAVA
+
+public class main{}:  (psv + tab)
+
+    Define una CLASE llamada MAIN.
+
+    Una clase es una estructura fundamental que se usa para encapsular datos y comportamientos relacionados.
+
+    La clase main es la clase principal del programa. El método Main es dónde comienza la ejecución del programa.
+    Cada programa es Java necesita tener al menos un mñetodo Main.
+
+    DEFINE UN NUEVO TIPO DE OBJETO.
+ 
+public static void Main(String[] args)   (psvm + tab)
+
+    Declara el MÉTODO MAIN, punto de entrada y dónde comienza la ejecución del código.
+
+    public: modificador de acceso que indica que el método main es accesible desde cualquier parte del programa.
+    static: Es un modificador que indica que el método mainpertenece a la clase en lugar de una instanvia particular de la clase.
+    No es necesario crear un objeto particular de la clases para invocar éste método; puede ser llamado deirectamente desde la clase.
+    main: mombre del método. El método MAIN es el principal.
+    String[] args: es un parámetro. "args" es un amatriz de tipo string que se utiliza para recibir argumentos desde la línea de comandos
+    cuándo se ejecuta el programa.
+
+DEFINIR UNA VARIABLE:
+    primero tengo que escribir que tipo de variale es, ej:
+        String myString = "Cadena de texto"
+    para modificar la variable sólo la tengo que llamar:
+        myString: "Nuevo valor de variable"
+    para modificar el tipod e variable, colocar un punto seguido de la vatiavle, seguido del tipo al que quiero convertir. Ej:
+        myInt.doubleValue()  o Doble.valueOf(myFloat)
+    para anular una variable colocarle la palabra "null"
+
+CREAR UNA LISTA:
+
+    lsita<string> myList = newArrayList(); // list<tipoDeLaLista> nombreDeLaLista = clase
+
+    agregar dato a la lista: myList.add(myString)
+    Convertir darto para compatibilizar con la lista: myList.add(myInt.toString())
+
+MAPAS: Colecciones  c/ elementos asociados tipo clave/valor.
+    map myMap=newHashMap();
+    myMap.put("int", myInt);
+        System.out.println(myMap) -> imprime el mapa completo
+        System.out.println(myMap.get("Int")) -> imprime el valor asociado a esa clave
+
+    map <String,String> myMap=newHashMao(); -> para definir el tipo de mapa
+
+BUCLE FOR:
+    estructura de control que s eusa para iterar un bloque de código un nro específico de veces.
+    sintáxis:
+        for(inicialización, condiciñon, inc/dec){
+
+        }    
+            inicialización: inicializar una variable de control
+            condición: expreción booleana para que se ejecute el código
+            inc/dec: op que se realiza al finalizar la iteración para actualizar la variable de ctrl y avanzar a la sgte iteración
+    Ej:
+        public class bucleFor{
+            public static void main(){
+            for(int 1=1; i<=5; i++){
+                System.out.println("numero: " + i)
+                }
+            }
+        }
+
+BUCLE WHILE:
+    estructuta de ctrl para repetir un bloque de código mientras se cumpla una condición
+    sintáxis:
+        while(condición){
+
+        }    
+
+    ej:
+        public class bucleFor{
+            public static void main(String[] args){
+                int i=1
+                while (i<=5){
+                    System.out.printin("nro: " + i);
+                }
+            }
+        }
+    
+    Este bloque es útil cuando la cantidad de iteraciones no es conocida o cuando la lógica de acutalizacion es más compleja
+    y no se ajusta bien a la del bucle for.
+
+BUCLE DO-WHILE:
+    es cómo el while convencional pero garantiza que el bloque de código se ejecute al menos una vez, incluso si la condición
+    no se cumple inicialmente.
+
+    sintáxis:
+        do{ //código a ejecutar
+        } while(condición)
+
+    ej:
+        #include <iostream>
+            int main() {
+                int contador = 1;
+
+                do {
+                    std::cout << "Contador: " << contador << std::endl;
+                    contador++;
+                } while (contador <= 5);
+
+                return 0;
+            }
+
+PALABRAS BREAK y CONTINUE
+    Se usan en bucles para constrolar el flujo de ejecución y la iteración. Son útiles para interrumpir o modificar el comportamiento
+    normal del bucle.
+
+    break: se usa para salir inmediatamente del bucle. Ej:
+        for(int i=1; i<=10; i++){
+            if(i==5){
+                break;
+            }
+                system.out.println("nro" + i);
+        }
+    continue: se usa para saltar a la sgte iteración del código, se omite el código restante y pasa directamente a la sgte. Ej:
+            int i = 0;
+            while (i < 5) {
+                i++;
+                if (i == 3) {
+                    continue; // Saltar a la siguiente iteración cuando i sea igual a 3
+                }
+                System.out.println("Número: " + i); 
+            }
+
+Lección 3: Clases y objetos
+
+	Una clase conjunto de objetos que comparten una estructura y comportamientos comunes, son necesarias para instanciaar un objeto.
+	Es una plantilla o molde en la que trabajaremos y de la cual podemos crear objetos.
+	Las clases tinen atributos y métodos los cuales extraen información de lo que es el mundo real. Los atributos son características
+	asociadas al objeto.
+		Ej de atributo para una clase llamada persona: Nombre y apellido de una persona.
+	Las clases deben ser públicas para poder acceder desde otros archivos.
+		Sintaxis:
+			package Clases;
+				public class Persona {
+    
+				}
+
+	Objeto: es una instancia de una clase, cada objeto tiene propiedades específicas que los diferencian de otros objetos;
+	estas caracteríasticas son conocidas como atributos.
+	Métodos: Son las acciones que podemos realizar con nuestros objetos. Es una parte de código que podemos reutilizar y llamar las veces que
+    sean necesarias (argumentos), también puede devolver un valor (valor de retorno). Los métodos y atributos comienzan siempre con minuscula.
+        Para definir el método:
+            public: Significa que el método es público y se puede acceder de otros archivos
+            void: Significa que no devuelve ningun valor de retorno.
+
+            EJ: public void obtenerInformacion(){
+
+            }    //Lo que va entre paréntesis se lo conoce como argumento
+
+            main: Es un método que permite ejecutar hacia la consola los programas. Se recomienda ponerlo en otro archivo. Cuando las variables
+            se declaran dentro de éste, las variables son locales.
+                 psvm + tab:
+                public class pruebaPersona {
+                    public static void main(String[] args) {
+                        Persona persona1; //Definimos una variable llamada persona1
+                        persona1 = new Persona();//Usamos la palabra reservada new y llamamos al contructor
+                        persona1.nombre = "Emilia";
+                        persona1.apellido = "Bazàn";
+                        persona1.obtenerInformacion(); 
+                    }
+                }
+
+    Operador this: Es una variable que apunta al objeto en ejecución, es decir al espacio en memoria donde está guardado el objeto para hacer
+    modificaciones. Hace que se diferencien los atributos de los argumentos. Si el ateributo y la variable tienen el mismo nombre, es necesario colocar this al atributo.
+        EJ: this.a=a;
+            this.b=b;
+
+    Constructor: Método especial que construye un objeto, reserva un espacio e memoria e inicializa los atributos de la clase.
+
+    Alcance de variables: Solo se pueden urilizar dentro del método dónde se definió.
+
+    Memoria stack:
+    En Java, la memoria de la pila (stack memory) se utiliza para almacenar variables locales y referencias a objetos con alcance limitado en un
+    programa. Sigue el principio LIFO y es eficiente, pero tiene un tamaño fijo y no almacena objetos complejos, que se gestionan en la memoria 
+    del montón (heap memory). La memoria de la pila es crítica para controlar el flujo del programa y evitar desbordamientos de la pila.
+    
+    Memoria heap:             
+    En Java, la memoria del montón (heap memory) se utiliza para almacenar objetos complejos y dinámicos, como instancias de clases. 
+    Tiene un tamaño variable y se encarga de la gestión automática de la memoria a través del recolector de basura (garbage collector) 
+    para liberar objetos no utilizados. 
+    La memoria del montón es esencial para la creación y gestión de objetos en Java.
+
+    Creación de clases:
+        Solo puede haber una clase del tipo pública. Para crear otra clase, se utiliza sólo la palabra class + el nombre de la clase.
+            class Persona{
+
+            }
+        A esta clase solo se puede acceder dentro del mismo paquete. Le creamos dos atributos.
+            class Persona{ 
+                string nombre;
+                string apellido;
+
+            }
+
+        Agregamos modificadr de acceso: 
+            class Persona{ 
+                String nombre;
+                String apellido;
+
+                public Persona(String nombre, String apellido) {
+                    this.nombre = nombre;
+                    this.apellido = apellido;
+                }
+            }
+
+    Encapsulamiento            
