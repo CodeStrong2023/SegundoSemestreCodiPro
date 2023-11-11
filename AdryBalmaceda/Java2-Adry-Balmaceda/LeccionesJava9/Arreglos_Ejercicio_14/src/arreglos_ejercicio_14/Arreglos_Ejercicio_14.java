@@ -20,10 +20,10 @@ public class Arreglos_Ejercicio_14 {
         int c[] = new int[20];
         boolean creciente = true;
 
-        System.out.println("Llenar el primer arreglo: ");
+        System.out.println("Llenar el primer arreglo");
         do {
             for (int i = 0; i < 10; i++) {
-                System.out.println(".Digite un numero: ");
+                System.out.println((i + 1) + ".Digite un numero: ");
                 a[i] = entrada.nextInt();
             }
             //Recorrer el arreglo para ver si está ordenado
@@ -42,7 +42,7 @@ public class Arreglos_Ejercicio_14 {
             }
         } while (creciente == false);
 
-        System.out.println("Llenar el segundo arreglo: ");
+        System.out.println("\nLlenar el segundo arreglo");
         do {
             for (int i = 0; i < 10; i++) {
                 System.out.println((i + 1) + ".Digite un numero: ");
@@ -94,9 +94,9 @@ public class Arreglos_Ejercicio_14 {
             }
         }
 
-        System.out.println("\nEl arreglo c completo es: ");
+        System.out.println("\nEl arreglo c completo es");
         for (k = 0; k < 20; k++) {
-            System.out.println(" - ");
+            System.out.println(k);
         }
         System.out.println();
     }

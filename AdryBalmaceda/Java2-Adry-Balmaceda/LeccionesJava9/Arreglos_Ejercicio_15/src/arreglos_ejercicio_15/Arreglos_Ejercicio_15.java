@@ -19,10 +19,10 @@ public class Arreglos_Ejercicio_15 {
         boolean creciente = true;
         int numero, numero2 = 0;
 
-        System.out.println("Llenar el arreglo: ");
+        System.out.println("Llenar el arreglo");
         do {
             for (int i = 0; i < 10; i++) {
-                System.out.println(".Digite un numero: ");
+                System.out.println((i + 1) + ".Digite un numero: ");
                 arreglo[i] = entrada.nextInt();
             }
 

@@ -17,9 +17,9 @@ public class Arreglos_Ejercicio_12 {
         int arreglo[] = new int[10];
         int posicion, j = 0;
 
-        System.out.println("Llenar el arreglo: ");
+        System.out.println("Llenar el arreglo");
         for (int i = 0; i < 10; i++) {
-            System.out.println(".Digite un numero: ");
+            System.out.println((i+1)+".Digite un numero: ");
             arreglo[i] = entrada.nextInt();
         }
 
@@ -35,9 +35,9 @@ public class Arreglos_Ejercicio_12 {
             arreglo[i] = arreglo[i + 1];
         }
         
-        System.out.println("\nMostrar arreglo: ");
+        System.out.println("\nMostrar arreglo");
         for(int i=0;i<9;i++){
-            System.out.println(arreglo+" - ");
+            System.out.println(i);
         }
         System.out.println();
     }
