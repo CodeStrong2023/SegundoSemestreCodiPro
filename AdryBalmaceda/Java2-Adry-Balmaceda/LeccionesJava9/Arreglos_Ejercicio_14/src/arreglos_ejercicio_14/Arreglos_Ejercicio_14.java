@@ -7,7 +7,7 @@ sigan ordenados
 package arreglos_ejercicio_14;
 
 import java.util.Scanner;
-
+import java.util.Arrays;
 /*
  * @Adrybalmaceda
  */
@@ -96,7 +96,8 @@ public class Arreglos_Ejercicio_14 {
 
         System.out.println("\nEl arreglo c completo es");
         for (k = 0; k < 20; k++) {
-            System.out.println(k);
+            System.out.println(Arrays.toString(c));
+            //System.out.println(k);
         }
         System.out.println();
     }

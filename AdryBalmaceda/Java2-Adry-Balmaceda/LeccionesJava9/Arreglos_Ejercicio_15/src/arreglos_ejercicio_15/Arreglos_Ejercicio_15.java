@@ -7,7 +7,7 @@ indicarlo con un mensaje.
 package arreglos_ejercicio_15;
 
 import java.util.Scanner;
-
+import java.util.Arrays;
 /*
  * @Adrybalmaceda
  */
@@ -21,7 +21,7 @@ public class Arreglos_Ejercicio_15 {
 
         System.out.println("Llenar el arreglo");
         do {
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0;i < arreglo.length; i++) {
                 System.out.println((i + 1) + ".Digite un numero: ");
                 arreglo[i] = entrada.nextInt();
             }

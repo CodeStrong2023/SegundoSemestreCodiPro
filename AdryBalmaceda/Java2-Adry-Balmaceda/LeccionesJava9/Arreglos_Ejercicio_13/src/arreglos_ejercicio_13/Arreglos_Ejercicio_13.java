@@ -6,10 +6,9 @@ elementos pares de la primera, y a continuacion los elementos impares
 package arreglos_ejercicio_13;
 
 import java.util.Scanner;
-
-/**
- *
- * @author Adriana
+import java.util.Arrays;
+/*
+ * @Adrybalmaceda
  */
 public class Arreglos_Ejercicio_13 {
 
@@ -19,8 +18,8 @@ public class Arreglos_Ejercicio_13 {
         int conteo_pares = 0, conteo_impares = 0;
 
         System.out.println("LLenar el arreglo");
-        for (int i = 0; i < 10; i++) {
-            System.out.println((i + 1) + ".Digite un numero: ");
+        for (int i = 0; i < arreglo.length; i++) {
+            //System.out.println((i + 1) + ".Digite un numero: ");
             arreglo[i] = entrada.nextInt();
 
             if (arreglo[i] % 2 == 0) {  //crear arreglos usando contador
@@ -36,7 +35,7 @@ public class Arreglos_Ejercicio_13 {
         conteo_pares = 0; //usar como iteradores
         conteo_impares = 0;
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < arreglo.length; i++) {
             if (arreglo[i] % 2 == 0) {
                 par[conteo_pares] = arreglo[i];
                 conteo_pares++;
@@ -46,19 +45,23 @@ public class Arreglos_Ejercicio_13 {
             }
         }
         System.out.println("\nArreglo ingresado");
-        for (int i = 0; i < 10; i++) {
-            System.out.println(i);
+        for (int i = 0; i < arreglo.length; i++) {
+            System.out.println(Arrays.toString(arreglo)); //CORREGIR         
         }
+       // System.out.println();
 
         System.out.println("\nArreglo pares");
         for (int i = 0; i < conteo_pares; i++) {
-            System.out.println(i);
+            System.out.println(Arrays.toString(par)); //CORREGIR
+            
         }
+        //System.out.println();
 
         System.out.println("\nArreglo impares");
         for (int i = 0; i < conteo_impares; i++) {
-            System.out.println(i);
+            System.out.println(Arrays.toString(impar)); //CORREGIR
+            //System.out.println();
         }
-        System.out.println();
+        //System.out.println();
     }
 }

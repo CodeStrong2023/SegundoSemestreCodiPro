@@ -19,16 +19,18 @@ public class Matriz_Ejercicio_6 {
         System.out.println("Digite la matriz");
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 9; j++) {
-                System.out.println("[" + i + "][" + j + "]: ");
+
                 matriz1[i][j] = entrada.nextInt();
             }
         }
 
-        System.out.println("\nLa matriz original es");
+        System.out.println("\nImprimir matriz original");
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 9; j++) {
-                System.out.println("[" + i + "][" + j + "]");
+                System.out.print(matriz1[i][j] + " ");
+
             }
+            System.out.println();
         }
 
         //Transponer matriz
@@ -37,13 +39,15 @@ public class Matriz_Ejercicio_6 {
                 matriz2[j][i] = matriz1[i][j];
             }
         }
-        System.out.println("\nLa matriz transpuesta es");
+        System.out.println("\nImprimir matriz transpuesta");
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 5; j++) {
-                System.out.println("[" + i + "][" + j + "]");
+                System.out.print(matriz2[i][j] + " ");
+
             }
-            //System.out.println();
+            System.out.println();
+
         }
-        //System.out.println();
+
     }
 }
