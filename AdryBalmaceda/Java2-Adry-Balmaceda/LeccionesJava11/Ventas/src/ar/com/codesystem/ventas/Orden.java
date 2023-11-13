@@ -30,17 +30,27 @@ public class Orden {
             System.out.println("Se ha superado el maximo de productos: " + Orden.MAX_PRODUCTOS);
         }
     }
-    
+
     //Metodo donde vamos a iterar los elementos del arreglo de aquellos elementos cuyo valor no es nulo 
     //y ya han sido cargados y los lugares que estan vacios estan en null
-    public double calcularTotal(){  //Este metodo necesita retornar si no daria error
+    public double calcularTotal() {  //Este metodo necesita retornar si no daria error, con este recorremos el array
         //Crear variable
-        double total=0;  //inicializar en 0 es una variable temporal
+        double total = 0;  //inicializar en 0 es una variable temporal
         for (int i = 0; i < contadorProductos; i++) {
             //Producto producto =this.productos[i];  
             //total+=producto.getPrecio();
-            total+=this.productos[i].getPrecio();  //comentar las 2 lineas anteriores porque este las reemplaza en una linea
+            total += this.productos[i].getPrecio();  //comentar las 2 lineas anteriores porque este las reemplaza en una linea
         }
         return total;
+    }
+
+    public void mostrarOrden() {
+        System.out.println("Id Orden: " + idOrden);
+        double totalOrden = this.calcularTotal();
+        System.out.println("El total de la orden es: ~$" + totalOrden);
+        System.out.println("Productos de la orden: ");
+        for (int i = 0; i < this.contadorProductos; i++) {
+            System.out.println(this.productos[i]);
+        }
     }
 }
