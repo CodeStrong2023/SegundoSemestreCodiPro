@@ -24,3 +24,11 @@ let $break = "ddd"; //No utilizar palabras reservadas para variables
 
 console.log($1num)
 console.log($break)
+
+//Hoy ya no se usar var, se utiliza Let y const
+nombre = "Pedro";
+console.log(nombre)
+
+const apellido2 = "Lepez";
+//apellido2 = "Peres"; Una constante no puede ser modificada
+console.log(apellido2)
