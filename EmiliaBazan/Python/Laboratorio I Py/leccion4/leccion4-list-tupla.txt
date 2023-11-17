@@ -1,0 +1,65 @@
+LISTAS: estructuras de datos que permiten almacenar y organizar elementos. 
+Los elementos pueden ser de cualquier tipo de dato.
+Se definen con el nombre, el simbolo igual y los elementos entre corchetes separados por comas.
+
+    lista = [2,2,3,a,z]
+
+Acceder a elemento:
+    elemento_1=lista[0]
+
+Modificar elemento:
+    lista[2]=10  # Cambia el 3er elemento a 10
+
+Longitud de la lista:
+
+    longitud = len(lista)
+
+add elemento:
+    lista.append(6)  # Agrega 6 al final de la lista
+
+Eliminar elemento de la lista:
+    del lista[2]  # Elimina el tercer elemento de la lista
+    lista.remove(3)  # Elimina el elemento con valor 3 de la lista
+
+Slicing:
+    sub_lista = lista[1:4]  # Devuelve [2, 3, a] # Saca una porción de la lista
+    
+Concatenación de listas:
+
+    concatenada = lista + lista1  # Devuelve los valores de las listas concatenadas
+
+ Verificación de valor:
+
+    exist = 20 in lista # Devuelve True o false si el elemento esta o no en la lista.   
+
+
+TUPLAS: Estructuras de datos similares a las listas pero con la diferencia de que son inmutables.
+Los elementos pueden ser de cualquier tipo de dato.
+Se definen con el nombre, el simbolo igual y los elementos entre paréntesis separados por comas.
+
+    tupla = [2,2,3,a,z]
+
+Acceder a elemento:
+
+    elemento_1=tupla[0]
+
+Desempaquetado:
+
+    tupla = (3, 6)
+    a, b = tupla  # a tendrá el valor 3, b tendrá el valor 6
+
+Longitud de la tupla:
+
+    longitud = len(tupla)    
+
+Ventajas de las tuplas:
+
+    Inmutabilidad: Las tuplas son útiles cuando necesitas asegurarte de que los datos no se modifiquen accidentalmente.
+    Eficiencia: Dado que las tuplas son inmutables, son más ligeras en términos de rendimiento y uso de memoria en comparación con las listas.
+    Uso en diccionarios: Las tuplas se pueden usar como claves en diccionarios de Python debido a su inmutabilidad.
+
+Limitaciones de las tuplas:
+
+    No se pueden modificar: Una vez que se crea una tupla, no se pueden agregar, eliminar ni cambiar elementos.
+    Menos flexibilidad: Si necesitas realizar operaciones de modificación frecuentes en los elementos, las listas son más adecuadas.
+
